@@ -767,7 +767,7 @@ label act2:
 
         x "Yeah. A job you aren't making any easier for me to carry out."
 
-        x "Has my magnanimous cooperation not been to your liking, Inspector?"
+        x "Has my magnanimous cooperation not been to your liking, inspector?"
 
         x "If you're not happy, then I am not happy."
 
@@ -783,7 +783,7 @@ label act2:
 
         x "Regrettably."
 
-        t what aw drop "It's nice to see you too, Inspector Medina."
+        t what aw drop "It's nice to see you too, inspector Medina."
 
         scene black 
         show me neutral at center
@@ -899,7 +899,7 @@ label act2:
 
             me "A greedy bastard."
 
-            en "Inspector, Inspector… If I were as avaricious as you make me out to be, you and that young man would have been charged for entry by now. And not at retail price, mind you!"
+            en "Inspector, inspector… If I were as avaricious as you make me out to be, you and that young man would have been charged for entry by now. And not at retail price, mind you!"
 
             me "Piss off. You know I'm investigating, and you've only allowed a handful of my subordinates into the Derby."
 
@@ -969,7 +969,7 @@ label act2:
 
             me "As far as I'm concerned, that slimeball Villarreal has them all in his pocket."
 
-            t grin "I'll give it a thorough read, then. Thanks, Inspector!"
+            t grin "I'll give it a thorough read, then. Thanks, inspector!"
 
             me "Don't mention it. Seriously, don't. I don't even know why I'm handing this over to you."
 
