@@ -93,7 +93,7 @@ screen dossier_ui():
             null height 5
             textbutton "Close" action Hide("dossier_ui")   
 
-        showif renpy.get_screen("ce", tag_only=True) or aai_active and aai_mode == "present":
+        showif renpy.get_screen("ce") or aai_active and aai_mode == "present":
             imagebutton:
                     idle "button-empty"
                     idle_foreground Text("Present!", xalign=0.5, yalign=0.5)
@@ -282,7 +282,7 @@ screen dossier_ui():
 
 screen dossier_icon:
     zorder 100
-    showif not renpy.get_screen("game_over", tag_only=True) and dossier_enabled:
+    showif not renpy.get_screen("game_over") and dossier_enabled:
         draggroup:
             drag:
                 drag_name "dossier_icon"
