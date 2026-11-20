@@ -34,7 +34,7 @@ define en = Character ("Lorenzo Villareal", kind=bb, image="en")
 define me = Character ("Sofía Medina", kind=bb, image="me")
 
 #NPCs
-define tv = Character("TV Reporter", kind=bb)
+define tv = Character("Reporter", kind=bb)
 define ch = Character("La Chispa", kind=bb)
 
 define of = Character("Officer", kind=bb)

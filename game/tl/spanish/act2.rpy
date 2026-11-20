@@ -3015,3 +3015,29 @@ translate spanish strings:
     old "Deflect the brass-knuckle punch"
     new "Desviar la piña del de los nudillos de bronce"
 
+# TODO: Translation updated at 2026-11-20 16:04
+
+# game/act2.rpy:770
+translate spanish lockers1_6bec8720:
+
+    # x "Has my magnanimous cooperation not been to your liking, inspector?"
+    x ""
+
+# game/act2.rpy:786
+translate spanish lockers1_65349334:
+
+    # t what aw drop "It's nice to see you too, inspector Medina."
+    t what aw drop ""
+
+# game/act2.rpy:902
+translate spanish lockers1_topic1_8f526d45:
+
+    # en "Inspector, inspector… If I were as avaricious as you make me out to be, you and that young man would have been charged for entry by now. And not at retail price, mind you!"
+    en ""
+
+# game/act2.rpy:972
+translate spanish lockers1_complete_b39bf5b4:
+
+    # t grin "I'll give it a thorough read, then. Thanks, inspector!"
+    t grin ""
+

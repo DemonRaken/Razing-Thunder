@@ -1836,16 +1836,63 @@ label act3_continue6:
             jump choose_thugs
 
     label choose_cata:
+        scene placeholder_racetrack1
         show cata angry2
-        l "Catalina did it."
+        with fade
+        l "..."
+        l "Catalina Moreno... you are the murderer!"
+        r "Holy shit, the Ice Queen is the killer!?"
+        c "..."
+        c "What on earth are you doing?"
+        m "I'd like to know too. Why are you accussing her, out of all people?"
+        l "As you know, her alibi is shaky at best..."
+        l "But Ms. Moreno's relationship with the victim was already strained, unlike the others."
+        c "What are you babbling about now? I don't remember having a single exchange with that man."
+        l "Maybe. Or maybe not. He saw you in a poor light due to the rumors. Isn't that right, Mr. Mendoza?"
+        lu "W...We did talk about those rumors, but I don't know how true they are..."
+        l "That's of little consequence. Wherever they are true or not, what matters is how would Ms. Moreno react to it."
+        c "..."
+        l "It must have been infuriating, tolerating all these people besmirch your name."
+        l "So you finally took it upon yourself to teach one of them a lesson!"
+        c "Are you quite done?"
+        l "Huh...?"
+        c "I can't believe what I have to listen to. I had the faintest of trust placed on you..."
+        c "And this is how you repay me?"
+        lt "What...? Faith in me?"
+        c "Is that all you have to say? Frankly, I don't have time to waste on nonsense."
+        me "So you deny the allegations?"
+        c "I don't even have to. They are so idiotic and lack an actual basis, that it's a waste of breath on my end."
+        me "Even so... the fact remains your alibi remains unconfirmed."
+        c "..."
+        me "Looks like a standstill to me. Sorry, but I am going to take you in for questioning."
+        c "Hold on, you can't do that. If you do, I am going to miss out on the race."
+        me "A man is dead, and you care about is some puny event-"
+        c "Be quiet! How is my absence from the race going to tell you who did this!?"
+        c "My whereabouts will be the same, no matter how much you ask the same questions over and over!"
+        me "..."
+        r "Don't take it so personal, Catalina. Poor inspector there is just doing her work."
+        e "Easy now, Renata. She's clearly under a lot of stress..."
+        c "This is revolting, there are far more likely suspects and you'll jeopardize me?"
+        me "Alright, that's enough. We'll be standing all day here arguing at this rate. Take her away."
+        c "Maybe you should instead take in the inconsiderate man in the mask, instead!"
+        c "That is far more suspicious than anything I have done...!"
+        lt "D-Damn, I really pushed her buttons this time... multiple police officers manage to take her away, her shouts of complaints fading in the air."
         scene black
         with fade
-        l "This is a bad end. Expand on me."
-        with fade
+        l "..."
+        l "With an unclear suspect, all the people were questioned one by one..."
+        l "...but thanks to me, Catalina missed out on the Razing Thunder race."
+        l "Obviously, I was fired, so there I wasn't exactly allowed to stay at the derby."
+        l "The case went cold, and I never found who the culprit was."
+        l "Worst of all, sometime later, a couple of police officers came to my work place to arrest me."
+        l "It had seem Catalina learned of my true identity, and took it upon herself to let them know."
+        l "I denied it, of course, but that didn't help much. The inspector wasn't able to turn a blind eye this time."
+        l "Or maybe she didn't intend to after how things ended. Either way..."
+        l "With my freedom gone, I won't be able to continue my fight against evil- let alone figure out the killer of this case."
+        l "Betraying Catalina spiralled into all of this... what have I done..?"
         return
     label choose_rena:
         show rena angry2
-        l "Renata did it."
         with fade
 
         l "Renata Vargas, you are the culprit!"
@@ -1987,27 +2034,27 @@ label act3_continue6:
         scene black
         with fade
 
-        lt "..."
+        l "..."
 
-        lt "And with that, my involvement in the case came to an end."
+        l "And with that, my involvement in the case came to an end."
 
-        lt "I didn't pay much attention to the race results. All I cared about was finding the truth behind Vicente's death."
+        l "I didn't pay much attention to the race results. All I cared about was finding the truth behind Vicente's death."
 
-        lt "But I failed to do so."
+        l "But I failed to do so."
 
-        lt "Days after the Derby, I learned that the search for the culprit had gone nowhere."
+        l "Days after the Derby, I learned that the search for the culprit had gone nowhere."
 
-        lt "By that point, any evidence that could have closed the case had long since disappeared."
+        l "By that point, any evidence that could have closed the case had long since disappeared."
 
-        lt "Not only had the real culprit gotten away, but Sebastian had managed to exploit a technicality and remain free."
+        l "Not only had the real culprit gotten away, but Sebastian had managed to exploit a technicality and remain free."
 
-        lt "He's been sending his goons after me day after day to 'repay the favor' for our little encounters."
+        l "He's been sending his goons after me day after day to 'repay the favor' for our little encounters."
 
-        lt "I've fought them off as best I could, but one ambush caught me off guard."
+        l "I've fought them off as best I could, but one ambush caught me off guard."
 
-        lt "So this is the last thing I'll see, huh...? A bunch of crooked smiles and bright suits."
+        l "So this is the last thing I'll see, huh...? A bunch of crooked smiles and bright suits."
 
-        lt "Damn... it..."
+        l "Damn... it..."
 
         # End game // game over screen
         with fade
@@ -2047,9 +2094,9 @@ label act3_continue6:
         scene black
         with fade
 
-        lt "And just like that, I'm hauled away after my little 'confession'. My identity has been exposed, I'm being charged with murder, and now I'll have to wait for a lawyer before facing trial."
+        l "And just like that, I'm hauled away after my little 'confession'. My identity has been exposed, I'm being charged with murder, and now I'll have to wait for a lawyer before facing trial."
 
-        lt "What happened to the race? Who really killed Vicente? I'll never get to know the truth now…"
+        l "What happened to the race? Who really killed Vicente? I'll never get to know the truth now…"
 
         return
 
@@ -2088,9 +2135,13 @@ label act3_continue6:
         scene black
         with fade
 
-        lt "And just like that, I'm hauled away after my little 'confession'."
+        l "And just like that, I'm hauled away by the police."
 
-        lt "What happened to the race? Who really killed Vicente? I'll never get to know the truth now…"
+        l "What happened to the race? Who really killed Vicente? I'll never get to know the truth now…"
+
+        l "The inspector will ensure El Leopardo stays inactive for good now that I've been dettained again."
+
+        l "It's all over..."
 
         with fade
         return
@@ -2150,7 +2201,10 @@ label act3_continue6:
         me "If that's the accusation you're making, then I suppose we can consider the matter settled and investigate things further with that in mind."
         scene black
         with fade
-        lt "Hm... Could Castillo really have been behind all this? Did he simply order his men to have Vicente killed?"
+        l "Castillo ordering his men to get rid of someone seemed to make a lot of sense."
+        l "Until it didn't. Despite the inspector following that trail, nothing out from it."
+        l "The race continued its course, then tragedy struck at it's peak..."
+        l "...but even then, things carried on as usual. And the truth was lost forever."
         with fade
         return
     label choose_luc:
