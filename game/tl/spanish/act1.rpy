@@ -290,3 +290,53 @@ translate spanish strings:
     # game/act1.rpy:311
     old "Dossier updated."
     new "Dossier actualizado."
+    
+# TODO: Translation updated
+
+# game/act1.rpy:4
+translate spanish act1_e6bee4d7:
+
+    # x "It's the final stretch to the finish line!"
+    x "¡Ya estamos en la recta final, rumbo al disco!"
+
+# game/act1.rpy:5
+translate spanish act1_4b6cfc3c:
+
+    # x "The contestants are giving it their all, but what is this...!?"
+    x "¡Los ejemplares lo están dando todo, pero ¿qué es esto...?!"
+
+# game/act1.rpy:6
+translate spanish act1_e0264486:
+
+    # x "Perla Negra is taking the lead!"
+    x "¡Perla Negra toma la punta!"
+
+# game/act1.rpy:7
+translate spanish act1_1ac03265:
+
+    # x "Picaro is hot on her heels, with Dama de Plata closing in as well, followed by Lucero...!"
+    x "¡Pícaro le pisa los talones, con Dama de Plata acercándose también, y Lucero siguiéndole de cerca...!"
+
+# game/act1.rpy:8
+translate spanish act1_ed053282:
+
+    # x "Perla Negra is about to win the Razing Thunder, and... what!?"
+    x "¡Perla Negra está a un paso de ganar el Razing Thunder, y... ¿qué?!"
+
+# game/act1.rpy:9
+translate spanish act1_3ac39216:
+
+    # x "Suddenly, Perla Negra has collapsed on the racetrack! Just inches away from victory!"
+    x "¡De pronto, Perla Negra se desploma en la pista! ¡A escasos centímetros de la victoria!"
+
+# game/act1.rpy:10
+translate spanish act1_0524ce67:
+
+    # x "Picaro is now the first to cross the finish line!!!"
+    x "¡Pícaro es ahora el primero en cruzar la meta!!"
+
+# game/act1.rpy:11
+translate spanish act1_dd3293af:
+
+    # x "Oh no! Valentina Rios has suffered a tremendous fall at high speed...!"
+    x "¡No puede ser! ¡Valentina Ríos sufrió una caída tremenda a toda velocidad...!"
