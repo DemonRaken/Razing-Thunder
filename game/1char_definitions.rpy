@@ -1,0 +1,62 @@
+# Character Definitions
+define config.side_image_only_not_showing = True   # make side image not show when full body is shown.
+define config.say_attribute_transition = Dissolve(0.2, alpha=True)   # Always add a dissolve when expression changes
+define config.window_hide_transition = None   
+
+init 1:
+    default preferences.text_cps = 30
+
+define bb = Character(ctc="ctc_horse", ctc_pause="ctc_horse", ctc_position="fixed",
+                      window_background="textbox7",
+                      callback=blip, cb_blipfile="audio/tick.wav",
+                      what_justify=True)
+
+
+define x = Character("???", kind=bb)
+#Leopardo
+define l = Character("El Leopardo", kind=bb, image="leo")
+define lt = Character(kind=l, what_color="#4A86E8",  what_outlines=[(2,"#000000", 1, 1)],
+window_background="textbox8")#, cb_blipfile=None)
+
+#Tony
+define t = Character("Antonio Ortiz", kind=l, image="tony")
+define tt = Character(kind=t, what_color="#4A86E8", what_outlines=[(2,"#000000", 1, 1)],
+window_background="textbox8")#, cb_blipfile=None)
+
+define c = Character("Catalina Moreno", kind=bb, image="cata")
+define r = Character ("Renata Vargas", kind=bb, image="rena")
+define lu = Character ("Lucas Mendoza", kind=bb, image = "lu")
+
+define e = Character ("Esteban Rojas", kind=bb, image="est")
+define v = Character ("Vicente Ruiz", kind=bb, image="vi")
+define s = Character ("Sebastian Castillo", kind=bb, image="seb")
+define en = Character ("Lorenzo Villareal", kind=bb, image="en")
+define me = Character ("Sofía Medina", kind=bb, image="me")
+
+#NPCs
+define tv = Character("TV Reporter", kind=bb)
+define ch = Character("La Chispa", kind=bb)
+
+define of = Character("Officer", kind=bb)
+
+define tg = Character("Thug", kind=bb)
+define tga = Character("Thug A", kind=bb)
+define tgb = Character("Thug B", kind=bb)
+define tgc = Character("Thug C", kind=bb)
+define tgabc = Character("Thug A, B & C", kind=bb)
+
+# Change narrator to use the bb base
+define n = Character(kind=bb, callback=blip, cb_blipfile="audio/type.wav", cb_bliploop=True,
+window_background="textbox9",
+what_text_align=0.5-0.12,
+what_xalign=0.5-0.12)
+
+define narrator = Character(window_background=None) # workaround around this issue https://github.com/renpy/renpy/issues/4527
+
+# The time and location
+define tl = Character(what_color="#38761D",  
+what_outlines=[(2,"#000000", 1, 1)],
+kind= n,
+window_background="textbox9",
+what_text_align=0.5-0.12,
+what_xalign=0.5-0.12)
