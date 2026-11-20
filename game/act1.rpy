@@ -1,6 +1,7 @@
 # ACT 1 Starts here.
 label act1:
   scene black
+  stop music
   x "It's the final stretch to the finish line!"
   x "The contestants are giving it their all, but what is this...!?"
   x "Perla Negra is taking the lead!"
@@ -12,7 +13,7 @@ label act1:
   
   scene placeholder_backalley with dissolve:
     zoom 1.5
-  stop music
+  
   tl "9:45 PM. \nAlleway."
 
   lt "The grip on my phone tightens instinctively as I watch the violent fall, shocked."
@@ -95,7 +96,7 @@ label act1:
 
   tg "Son of a- hey! {size=+6}COME BACK!!!{/size}"
 
-  lt neutral right "No thanks. Like I wanna throw in the slammer with you. Once the cops go away, I'll see if I can get into contact with that customer of his."
+  lt neutral right "No thanks. Like I wanna be thrown in the slammer with you. Once the cops go away, I'll see if I can get into contact with that customer of his."
 
   l smile "Let's hurry up, Chispa. With some luck, we'll be done before the clock hits midnight."
 
@@ -105,7 +106,7 @@ label act1:
   scene placeholder_office 
   with fade
 
-  tl "8:00 AM. \nTony's Odd Jobs Agency."  
+  tl "8:00 AM. \nSoto Services Agency."  
   play music happy
 
   lt "Last night, we came across the person I was looking for shortly after. The guy hadn't run too far away, and it looked like the color drained from his face the moment I brought up the debt collector"

@@ -3004,13 +3004,13 @@ translate spanish strings:
 
     # game/act2.rpy:1139
     old "Disarm the man with the baton"
-    new "Desarmar al de la macana"
+    new "Desarmar al tipo de la porra"
 
     # game/act2.rpy:1141
     old "Shoulder throw the man with the wrench"
-    new "Derribar al de la llave inglesa por el hombro"
+    new "Arrojar al de la llave inglesa por encima del hombro"
 
     # game/act2.rpy:1143
     old "Deflect the brass-knuckle punch"
-    new "Desviar el piñazo del de los nudillos de bronce"
+    new "Desviar la piña del de los nudillos de bronce"
 
