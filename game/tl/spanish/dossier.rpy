@@ -30,3 +30,15 @@ translate spanish strings:
     old "Select A Location"
     new "Seleccioná una ubicación"
 
+# TODO: Translation updated at 2026-11-21 12:35
+
+translate spanish strings:
+
+    # game/dossier.rpy:99
+    old "Present!"
+    new "Presentar!"
+
+    # game/dossier.rpy:107
+    old "Travel!"
+    new "Moverse!"
+

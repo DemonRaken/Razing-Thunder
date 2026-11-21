@@ -126,7 +126,8 @@ label debug_cutins_test:
     define audio.cata = "audio/BGM/Peritune_Black_Crystal_loop.ogg"
     define audio.enzo = "audio/BGM/PerituneMaterial_Creep_loop.ogg"
     define audio.intense = "audio/BGM/PeriTune_Rituale Machina_loop.ogg"
-    define config.main_menu_music = "audio/BGM/Peritune_Tender_Gaze_inst.ogg"   
+    define config.main_menu_music = "audio/BGM/Peritune_Tender_Gaze_inst.ogg"
+    define audio.inves = "audio/BGM/Peritune_The_City_Breathes_Your_Name_loop.ogg"
 
 image deleteme_flicker_night:
     "neighborhood 2 night light"

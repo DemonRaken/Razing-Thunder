@@ -1046,7 +1046,8 @@ translate spanish paddock1_topic1_02106b95:
 translate spanish paddock1_topic1_acdc6ec9:
 
     # tt neutral right "I'd like to be as reassured as Esteban seems to be. But I wonder… Who actually performs these inspections? And how thorough are they, really? If there's room to manipulate the results, then…"
-    tt neutral right "Me gustaría estar tan tranquilo como parece Esteban. Pero me pregunto… ¿Quién hace realmente estas revisiones? ¿Y qué tan exhaustivas son, de verdad? Si hay margen para manipular los resultados, entonces…"
+    tt neutral right "Me gustaría estar tan tranquilo como parece Esteban. Pero me pregunto… ¿Quién hace realmente estas revisiones?"
+    tt neutral right "¿Y qué tan exhaustivas son, de verdad? Si hay margen para manipular los resultados, entonces…"
 
 # game/act2.rpy:422
 translate spanish paddock1_topic2_9b5b08a8:
@@ -1274,7 +1275,7 @@ translate spanish paddock1_complete_75ab149a:
 translate spanish stables1_306277f0:
 
     # tl "Razing Thunder Derby.\n Stables."
-    tl "Razing Thunder Derby.\n Caballerizas."
+    tl "Derby Trueno Arrasador.\n Caballerizas."
 
 # game/act2.rpy:530
 translate spanish stables1_0a386c6b:
@@ -1600,7 +1601,8 @@ translate spanish stables1_topic2_173ef9d7:
 translate spanish stables1_topic2_8555b7a6:
 
     # t det yell "What do you mean, 'and'!? Don't you care about being slandered? They're saying you're using your money to bribe trainers into quitting. Some even claim you're behind the horses collapsing."
-    t det yell "¿Cómo que '¿y?'!? ¿No te importa que te calumnien? Dicen que usás tu plata para sobornar a los entrenadores para que renuncien. Algunos hasta dicen que vos estás detrás de que los caballos se desplomen."
+    t det yell "¿Cómo que '¿y?'!? ¿No te importa que te calumnien? Dicen que usás tu plata para sobornar a los entrenadores para que renuncien." 
+    t det yell "Algunos hasta dicen que vos estás detrás de que los caballos se desplomen."
 
 # game/act2.rpy:670
 translate spanish stables1_topic2_69d8ce9b:
@@ -1636,13 +1638,13 @@ translate spanish rumors_no_94c8c51d:
 translate spanish rumors_no_625870be:
 
     # c "…You're acting as if my word alone were indisputable proof."
-    c "…Hacés como si mi palabra fuera una prueba indiscutible."
+    c "…Hacés como si mi palabra fuera la verdad absoluta."
 
 # game/act2.rpy:692
 translate spanish rumors_no_91e32bcf:
 
     # t neutral "Well, it might not be, but it's reassuring to hear it from you nonetheless."
-    t neutral "Bueno, capaz que no lo sea, pero igual tranquiliza escucharlo de tu boca."
+    t neutral "Bueno, capaz que no lo sea, pero igual tranquiliza escucharlo de vos."
 
 # game/act2.rpy:698
 translate spanish stables1_complete_a15920ea:
@@ -3026,23 +3028,49 @@ translate spanish strings:
 translate spanish lockers1_6bec8720:
 
     # x "Has my magnanimous cooperation not been to your liking, inspector?"
-    x ""
+    x "¿Mi magnánima cooperación no fue de su agrado, inspectora?"
 
 # game/act2.rpy:786
 translate spanish lockers1_65349334:
 
     # t what aw drop "It's nice to see you too, inspector Medina."
-    t what aw drop ""
+    t what aw drop "Un gusto verla de nuevo, inspectora Medina."
 
 # game/act2.rpy:902
 translate spanish lockers1_topic1_8f526d45:
 
     # en "Inspector, inspector… If I were as avaricious as you make me out to be, you and that young man would have been charged for entry by now. And not at retail price, mind you!"
-    en ""
+    en "Inspectora, inspectora… Si fuera tan avaricioso como me pinta, a usted y a ese joven ya les habrían cobrado la entrada. ¡Y no a precio de lista, ojo!"
 
 # game/act2.rpy:972
 translate spanish lockers1_complete_b39bf5b4:
 
     # t grin "I'll give it a thorough read, then. Thanks, inspector!"
-    t grin ""
+    t grin "Me lo voy a leer bien a fondo, entonces. ¡Gracias, inspectora!"
+
+# TODO: Translation updated at 2026-11-21 12:25
+
+# game/act2.rpy:1101
+translate spanish act2_inves_complete_4087f9b4:
+
+    # n "{i}*RING!*{/i}"
+    n ""
+
+# game/act2.rpy:1102
+translate spanish act2_inves_complete_8a46c210:
+
+    # n "*Bleep!*"
+    n ""
+
+# game/act2.rpy:1108
+translate spanish act2_inves_complete_6f8083b3:
+
+    # n "*Beep.*"
+    n ""
+
+# game/act2.rpy:1117
+translate spanish act2_inves_complete_6f8083b3_1:
+
+    # n "*Beep.*"
+    n ""
 

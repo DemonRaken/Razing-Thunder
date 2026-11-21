@@ -270,6 +270,7 @@ label vs_sebCE:
         jump act3_continue
  
     label act3_continue:
+    hide screen status_indicator
     
 
     t "It's true that, depending on how he landed, a fall from that height could have killed him..."
@@ -289,6 +290,8 @@ label vs_sebCE:
     s "So what!? He fell face-first! That's what happens when you hit the ground!"
 
     t "Then explain this: if the Vicente hit the ground face-first..."
+
+    play music objection fadein 0.5
     
     t "Why does he have such a large wound on the BACK of his head!?"
 
@@ -358,6 +361,8 @@ label b4fall:
 
     me "Good. Now, follow me, everyone. I need to have a good talk with all of you about your whereabouts."
 
+    stop music fadeout 2.5
+
     tt "The inspector is taking everyone back to the main racetrack. \nWhew, that was a close one..."
     tt "...but this is no time to be resting. I have to find out as much as I can. Who knows what other crap that guy Castillo will try to pull off?"
     tt "First, I need to make a quick stop to the trainer lockers..."  
@@ -371,6 +376,7 @@ label paddock_inves:
 
     lt "Huh. The police officers watching over the scene aren't trying to detain me. I guess the inspector gave them a heads-up? Much appreciated!"
     lt "Time to take a good look around and figure out what happened."
+    play music inves fadein 2.5
     #Points to click: just the body.
     #When done so, zoom in on it.
     lt "I should examine the body more closely... Let's see."
@@ -410,6 +416,7 @@ label stables_inves:
         lt "Why is there a bunch of hay in the middle of the ground? You'd think the staff would tidy up the place more."
         lt "Hang on, I can see something underneath it..."
         lt "Kneeling over, I begin to brush away all of the hay."
+        $ renpy.music.set_volume(0.4, delay=1.0, channel="music")
         lt "What the...!? This looks like someone's blood...!"
         lt "...yeah. No doubt about it, this is dried up blood. Moreover, it looks like a few drops lead outside..."
         lt "Huh? The trail suddenly ends before reaching the entrance."
@@ -418,6 +425,7 @@ label stables_inves:
     
     label stables_shovel:
     #click shovel
+        $ renpy.music.set_volume(1.0, delay=1.0, channel="music")
         lt "Wait a minute... What's this doing here?"
 
         lt "A stable shovel. Someone must've left it behind this stall."
@@ -3248,7 +3256,7 @@ label LastCE:
 label LastCE_WRONG:
     $ ce_mode = None
     l "This proves your testimony wrong, Mr. Rojas!!"
-    show es angry
+    show e angry
     e "Ahahah! Getting so desperate that you're throwing random evidence around, Leopardo!?"
     l "Guh...!"
     lt "That was the wrong piece of evidence... Calm down, me. Let's try that!"

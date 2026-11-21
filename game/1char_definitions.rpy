@@ -34,16 +34,16 @@ define en = Character ("Lorenzo Villareal", kind=bb, image="en")
 define me = Character ("Sofía Medina", kind=bb, image="me")
 
 #NPCs
-define tv = Character("Reporter", kind=bb)
+define tv = Character(_("Reporter"), kind=bb)
 define ch = Character("La Chispa", kind=bb)
 
-define of = Character("Officer", kind=bb)
+define of = Character(_("Officer"), kind=bb)
 
-define tg = Character("Thug", kind=bb)
-define tga = Character("Thug A", kind=bb)
-define tgb = Character("Thug B", kind=bb)
-define tgc = Character("Thug C", kind=bb)
-define tgabc = Character("Thug A, B & C", kind=bb)
+define tg = Character(_("Thug"), kind=bb)
+define tga = Character(_("Thug A"), kind=bb)
+define tgb = Character(_("Thug B"), kind=bb)
+define tgc = Character(_("Thug C"), kind=bb)
+define tgabc = Character(_("Thug A, B & C"), kind=bb)
 
 # Change narrator to use the bb base
 define n = Character(kind=bb, callback=blip, cb_blipfile="audio/type.wav", cb_bliploop=True,

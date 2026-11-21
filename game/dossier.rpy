@@ -96,16 +96,16 @@ screen dossier_ui():
         showif renpy.get_screen("ce") or aai_active and aai_mode == "present":
             imagebutton:
                     idle "button-empty"
-                    idle_foreground Text("Present!", xalign=0.5, yalign=0.5)
-                    hover_foreground Text("Present!", xalign=0.5, yalign=0.5)
+                    idle_foreground Text(_("Present!"), xalign=0.5, yalign=0.5)
+                    hover_foreground Text(_("Present!"), xalign=0.5, yalign=0.5)
                     action [SetVariable("ce_mode", "object"), SetVariable("ce_object", dossier_select), Hide("dossier_ui"), Return()]
                     xalign 0.010
                     yalign 0.805
         showif dossier_tab_control == "map" and dossier_map:
             imagebutton:
                     idle "button-sel"
-                    idle_foreground Text("Travel!", xalign=0.5, yalign=0.5)
-                    hover_foreground Text("Travel!", xalign=0.5, yalign=0.5)
+                    idle_foreground Text(_("Travel!"), xalign=0.5, yalign=0.5)
+                    hover_foreground Text(_("Travel!"), xalign=0.5, yalign=0.5)
                     action [SetVariable("aai_travel", dossier_map), Return()]
                     xalign 1-0.01
                     yalign 1-0.805+0.11

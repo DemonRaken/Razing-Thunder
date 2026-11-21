@@ -352,7 +352,7 @@ translate spanish vs_seb_Testimony_6de910d4:
 translate spanish vs_seb_Testimony_f4a28e5d:
 
     # tt "Yes, actually. And I'm going to find the flaw in your words."
-    tt "Sí, la verdad. Y voy a encontrarle la trampa a tus palabras."
+    tt "Sí, de hecho. Y voy a encontrarle el error en tus palabras."
 
 # game/act3.rpy:191
 translate spanish vs_sebCE_752731d7:
@@ -448,7 +448,7 @@ translate spanish vs_sebCE_b7ae45b3:
 translate spanish vs_sebCE_99f44787:
 
     # tt "I should open my \"{color=#FF9900}Dossier{/color}\" and \"{color=#FF9900}Present{/color}\" something that counters his claims."
-    tt "Debería abrir mi \"{color=#FF9900}Expediente{/color}\" y \"{color=#FF9900}Presentar{/color}\" algo que contradiga lo que dice."
+    tt "Debería abrir mi \"{color=#FF9900}Dosier{/color}\" y \"{color=#FF9900}Presentar{/color}\" algo que contradiga lo que dice."
 
 # game/act3.rpy:240
 translate spanish vs_sebCE_wrong_98de9b10:
@@ -9131,155 +9131,154 @@ translate spanish choose_thugs_e8cce576:
 translate spanish vs_sebCE2_loop_ca82f719:
 
     # s "I overlooked his questionable appearance, given that he's Catalina's trainer..."
-    s ""
+    s "Pasé por alto su apariencia cuestionable, dado que es el entrenador de Catalina..."
 
 # game/act3.rpy:710
 translate spanish vs_sebCE2_loop_f43560c3:
 
     # l "My- *cough* what is so questionable about that young man's appearance?"
-    l ""
+    l "Mi- *cof* ¿qué tiene de cuestionable la apariencia de ese joven?"
 
 # game/act3.rpy:711
 translate spanish vs_sebCE2_loop_014c09d7:
 
     # s "That unrefined hair, that nasty scar on his face, the ugly boots... need I go on?"
-    s ""
+    s "Ese pelo desaliñado, esa cicatriz asquerosa en la cara, las botas feas... ¿necesito seguir?"
 
 # game/act3.rpy:712
 translate spanish vs_sebCE2_loop_ef0ab8fe:
 
     # lt "I'm not taking fashion advice from the guy wearing two rolexs on his arm!"
-    lt ""
+    lt "¡No voy a aceptar consejos de moda del tipo que usa dos Rolex en el brazo!"
 
 # game/act3.rpy:716
 translate spanish vs_sebCE2_loop_e08839d1:
 
     # s "But no more! He's clearly a suspicious person!"
-    s ""
+    s "¡Pero se acabó! ¡Claramente es una persona sospechosa!"
 
 # game/act3.rpy:724
 translate spanish vs_sebCE2_loop_237d2e3b:
 
     # lt "What makes you so sure about that?"
-    lt ""
+    lt "¿Qué te hace estar tan seguro de eso?"
 
 # game/act3.rpy:725
 translate spanish vs_sebCE2_loop_cfedce39:
 
     # s "I'm getting there, mask freak! Stop interrupting me."
-    s ""
+    s "Estoy llegando, ¡enmascarado de mierda! Dejá de interrumpirme."
 
 # game/act3.rpy:728
 translate spanish vs_sebCE2_loop_65bdacde:
 
     # s "We all saw him prodding and standing near the body."
-    s ""
+    s "Todos lo vimos hurgando y parado cerca del cuerpo."
 
 # game/act3.rpy:736
 translate spanish vs_sebCE2_loop_96374245:
 
     # l "Uh... perhaps he was just trying to help the downed man?"
-    l ""
+    l "Eh... ¿quizás solo estaba tratando de ayudar al hombre caído?"
 
 # game/act3.rpy:737
 translate spanish vs_sebCE2_loop_9fbc0afc:
 
     # s "Now he's a parademic? Please!"
-    s ""
+    s "¿Ahora es paramédico? ¡Por favor!"
 
 # game/act3.rpy:738
 translate spanish vs_sebCE2_loop_e42b53cd:
 
     # lt "I do know some first aid..."
-    lt ""
+    lt "Sí sé un poco de primeros auxilios..."
 
 # game/act3.rpy:741
 translate spanish vs_sebCE2_loop_493a6318:
 
     # s "Who does that? A cold blooded murderer!"
-    s ""
+    s "¿Quién hace eso? ¡Un asesino a sangre fría!"
 
 # game/act3.rpy:749
 translate spanish vs_sebCE2_loop_01ac028c:
 
     # l "It's a bit of a stretch to label him a murderer just for that!"
-    l ""
+    l "¡Es un poco exagerado etiquetarlo de asesino solo por eso!"
 
 # game/act3.rpy:750
 translate spanish vs_sebCE2_loop_ba83a2db:
 
     # s "Say what you want, the police should just arrest him and let us run things here!"
-    s ""
+    s "Decí lo que quieras, ¡la policía debería arrestarlo y dejarnos manejar las cosas acá!"
 
 # game/act3.rpy:751
 translate spanish vs_sebCE2_loop_e4c92bfd:
 
     # lt "I don't know if I'll be so lucky twice if I end up there again. "
-    lt ""
+    lt "No sé si voy a tener tanta suerte dos veces si termino ahí de nuevo. "
 
 # game/act3.rpy:755
 translate spanish vs_sebCE2_loop_f13c1117:
 
     # s "He attacked that poor old man at the grandstands, then dropped him from high-up!"
-    s ""
+    s "¡Atacó a ese pobre viejo en las gradas, y después lo tiró desde arriba!"
 
 # game/act3.rpy:766
 translate spanish vs_sebCE2_loop_75048330:
 
     # l "He dropped him right after the attack?"
-    l ""
+    l "¿Lo tiró justo después del ataque?"
 
 # game/act3.rpy:767
 translate spanish vs_sebCE2_loop_b393e8b8:
 
     # s "Are your ears clogged? Yes!"
-    s ""
+    s "¿Tenés los oídos tapados? ¡Sí!"
 
 # game/act3.rpy:768
 translate spanish vs_sebCE2_loop_fd4f06f7:
 
     # l "That would mean Mr. Ruiz was assaulted at the top of the grandstands, yes?"
-    l ""
+    l "Eso significaría que el señor Ruiz fue agredido en lo alto de las gradas, ¿sí?"
 
 # game/act3.rpy:769
 translate spanish vs_sebCE2_loop_6fef3bc9:
 
     # s "Who?"
-    s ""
+    s "¿Quién?"
 
 # game/act3.rpy:770
 translate spanish vs_sebCE2_loop_398d4c89:
 
     # l "...the victim."
-    l ""
+    l "...la víctima."
 
 # game/act3.rpy:771
 translate spanish vs_sebCE2_loop_fcd6990c:
 
     # s "Oh. Yes. Don't make me repeat the same over and over!"
-    s ""
+    s "Ah. Sí. ¡No me hagas repetir lo mismo una y otra vez!"
 
 # game/act3.rpy:772
 translate spanish vs_sebCE2_loop_9857e5ba:
 
     # lt "I will when you stop contradicting yourself over and over."
-    lt ""
+    lt "Lo voy a hacer cuando dejes de contradecirte una y otra vez."
 
 # game/act3.rpy:777
 translate spanish vs_sebCE2_loop_e22cb570:
 
     # lt "I'm not about to let this guy frame me for murder."
-    lt ""
+    lt "No voy a dejar que este tipo me inculpe de asesinato."
 
 # game/act3.rpy:778
 translate spanish vs_sebCE2_loop_18cb6ce7:
 
     # lt "Thankfully, he's already made one grave mistake while spewing his falsehoods."
-    lt ""
+    lt "Por suerte, ya cometió un error grave mientras escupía sus mentiras."
 
 translate spanish strings:
 
     # game/act3.rpy:1029
     old "no idea"
-    new ""
-
+    new "ni idea"

@@ -908,5 +908,5 @@ translate spanish strings:
 translate spanish act1_83909c97:
 
     # tl "9:20 AM. \nPlaza."
-    tl ""
+    tl "9:20 AM. \nPlaza."
 

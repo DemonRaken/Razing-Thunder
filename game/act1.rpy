@@ -101,13 +101,13 @@ label act1:
   l smile "Let's hurry up, Chispa. With some luck, we'll be done before the clock hits midnight."
 
   ch "Neigh!"
-  stop music
+  stop music fadeout 2.5
 
   scene placeholder_office 
   with fade
 
   tl "8:00 AM. \nSoto Services Agency."  
-  play music happy fadein 2.5 fadeout 2.5
+  play music happy fadein 2.5 
 
   lt "Last night, we came across the person I was looking for shortly after. The guy hadn't run too far away, and it looked like the color drained from his face the moment I brought up the debt collector"
   
@@ -209,7 +209,7 @@ label act1:
   $ renpy.notify(_("Dossier is now available."))
   l "Vital information always goes there. It would be no joke to say that the very balance of the world depends on it...!"
   lt "Anyway, time to move!"
-  stop music
+  stop music fadeout 2.5
   show leo at right
   with move
 
@@ -383,6 +383,6 @@ label act1continues:
   t aha "Thanks, girl. I can always count on you."
 
   tt smile "Huffing, I hold onto the reins and hurry to go after my 'delightful' employer."
-  stop music
+  stop music fadeout 2.5
 
 jump act2
