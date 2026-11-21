@@ -64,7 +64,8 @@ translate spanish act1_0a8a927b:
 translate spanish act1_091886ff:
 
     # tv "—and those are the images moments before the end of the Razing Thunder race, three days ago. While the jockey Valentina Rios suffered only minor bruises from the fall, her horse, Perla Negra,"
-    tv "—y esas son las imágenes momentos antes del final de la carrera del Trueno Arrasador, hace tres días. Aunque la jockey Valentina Ríos solo sufrió moretones leves por la caída, su caballo, Perla Negra,"
+    tv "—y esas son las imágenes momentos antes del final de la carrera del Trueno Arrasador, hace tres días."
+    tv "Aunque la jockey Valentina Ríos solo sufrió moretones leves por la caída, su caballo, Perla Negra,"
 
 # game/act1.rpy:23
 translate spanish act1_e94d8281:
@@ -352,7 +353,8 @@ translate spanish act1_56de0b2f:
 translate spanish act1_7a831f41:
 
     # lt "On the surface, these are nothing more than a string of unfortunate accidents, after all. Ones that just happen to fill up the pockets of those handling the race bets. The clandestine type, that is."
-    lt "En la superficie, no son más que una serie de accidentes desafortunados, al fin y al cabo. Unos que casualmente llenan los bolsillos de quienes manejan las apuestas de la carrera. Las apuestas clandestinas, claro."
+    lt "En la superficie, no son más que una serie de accidentes desafortunados, al fin y al cabo." 
+    lt "Unos que casualmente llenan los bolsillos de quienes manejan las apuestas de la carrera. Las apuestas clandestinas, claro."
 
 # game/act1.rpy:128
 translate spanish act1_ca83b259:
@@ -898,4 +900,11 @@ translate spanish strings:
 
     # game/act1.rpy:326
     old "Dossier updated."
-    new "Dosier actualizado."
+    new "Dosier actualizado."# TODO: Translation updated at 2026-11-20 21:41
+
+# game/act1.rpy:219
+translate spanish act1_83909c97:
+
+    # tl "9:20 AM. \nPlaza."
+    tl ""
+

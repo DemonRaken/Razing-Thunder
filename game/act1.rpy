@@ -27,7 +27,7 @@ label act1:
   l "What a nasty fall! And she was so close to claiming first place, too…"
 
   show thug at center
-  play music eccentric
+  play music eccentric fadein 2.5 fadeout 2.5
 
   tg "Bastard! When I get out of these, I'm going to smash that phone on your stupid face!"
 
@@ -107,7 +107,7 @@ label act1:
   with fade
 
   tl "8:00 AM. \nSoto Services Agency."  
-  play music happy
+  play music happy fadein 2.5 fadeout 2.5
 
   lt "Last night, we came across the person I was looking for shortly after. The guy hadn't run too far away, and it looked like the color drained from his face the moment I brought up the debt collector"
   
@@ -149,6 +149,7 @@ label act1:
   
 
 # Make screen shake here because phone went off and maybe add photoshpped whatsapp conversation!!!1
+  play music happy volume 0.4
   play sound "new_fashion_tone.ogg" fadein 0.5
   show layer master at earthquake(dt=1.0, dist=2)
   n "{i}*RING!*{/i}"
@@ -180,7 +181,7 @@ label act1:
   pause
   hide phone whatsapp boss 16 9 with dissolve
   show leo neutral
-
+  play music happy volume 1.0
   lt "Yup. She's got a new gig for me. A special one at that, considering it's last-minute and happening today."
 
   lt "I continue reading the job description, resigning myself to putting my plans on hold."
@@ -215,7 +216,7 @@ label act1:
   scene placeholder_park 
   with fade
 
-  tl "{b}9:20 AM. \nPlaza.{/b}"
+  tl "9:20 AM. \nPlaza."
 
   lt "This should be the place… Chispa makes it a cinch to get around in no time."
   
@@ -267,7 +268,7 @@ label act1:
   scene placeholder_park
   show cata yell
   with fade
-  play music cata fadein 1.0 fadeout 1.0
+  play music cata fadein 2.5 fadeout 2.5
   c "—hey. I'm talking to you. Are you even listening?"
   
   t neutral blush "Wha- sorry! I zoned out there for a sec."
@@ -275,13 +276,13 @@ label act1:
   c "Good grief. As I was saying, who you are is inconsequential, and my reputation precedes me, so let's keep introductions short."
 
   tt what drop "Geez… you sure know how to pick 'em, boss. This is gonna be one hell of a day…"
-
+  default knowcata = False
   menu:
 
         t neutral "Right. Your reputation. I…"
 
         "I know who you are":
-
+            $ knowcata = True
             jump iknow
 
         "I have no idea who you are.":

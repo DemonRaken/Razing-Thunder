@@ -31,7 +31,7 @@ label act2:
     scene placeholder_stables
     with fade
     tl "9:40 AM.\nRazing Thunder Derby.\nStables."
-    play music happy2
+    play music happy2 fadein 2.5
     tt "Whew… we're finally done with all the paperwork. I'm \"{color=#FF9900}Dama de Plata's{/color}\" trainer now, even if only in name."
     show cata neutral with dissolve
     c "Several participants have withdrawn from the competition, so there are plenty of vacant stalls. You can keep Chispa in one of them."
@@ -612,18 +612,18 @@ label act2:
             c "So you've already heard about them. That saves me time."
 
             # Check a flag if they answered they know Moreno in ACT 1. If yes:
+            if knowcata:
+                show cata smile
+                c "You hardly look the part, but you're surprisingly well-informed. That is... commendable."
 
-            show cata smile
-            c "You hardly look the part, but you're surprisingly well-informed. That is... commendable."
-
-            tt what drop "What kind of backhanded compliment is that…?"
+                tt what drop "What kind of backhanded compliment is that…?"
 
             # If they don't know Moreno:
+            else:
+                show cata angry2
+                c "…How is it that you know about a lowlife like him, but not me? Frankly, I am appalled."
 
-            show cata angry2
-            c "…How is it that you know about a lowlife like him, but not me? Frankly, I am appalled."
-
-            tt neutral closed "Because it's my JOB to deal with crooks like him…"
+                tt neutral closed "Because it's my JOB to deal with crooks like him…"
 
             #Back to main branch
 

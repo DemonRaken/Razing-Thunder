@@ -30,7 +30,7 @@ label act3:
         t "......he's dead. He's all bruised up, and his legs are bent in an unnatural way, too."
 
         $ dossier.add(de_victimnotes)
-        scene placeholder_racetrack1
+        scene placeholder_paddock
 
         tt "Damn it… how did this happen!?"
 
@@ -167,7 +167,7 @@ label intervene:
 
 #Tony vs Seb
 label vs_seb_Testimony:
-    scene placeholder_bodycg
+    scene placeholder_paddock
     call fx_testimony
     show seb smile3
     with fade
@@ -178,6 +178,7 @@ label vs_seb_Testimony:
     s "Now, get out of the way so these gentlemen can do their job."
     
     hide screen status_indicator
+    stop music fadeout 2.5
     t "So he just... happened to fall off from up there?"
     s "What do you have infront of you? Stop wasting time and let the good inspector do her thing!"
     t "Right after I ask you a few things..."
@@ -185,7 +186,7 @@ label vs_seb_Testimony:
     tt "Yes, actually. And I'm going to find the flaw in your words."
     
 label vs_sebCE:
-    scene placeholder_bodycg
+    scene placeholder_paddock
     call fx_interrogation
     show seb smile3
     with fade
@@ -234,6 +235,7 @@ label vs_sebCE:
         with fade
 
     hide screen ce_ui
+    hide screen status_indicator
     tt "He won't budge from this until I throw some evidence at his face."
     tt "I should open my \"{color=#FF9900}Dossier{/color}\" and \"{color=#FF9900}Present{/color}\" something that counters his claims."
     jump vs_sebCE
@@ -675,6 +677,7 @@ label stables_inves:
             s "He attacked that poor old man at the grandstands, then dropped him from high-up!"
 
             hide screen status_indicator
+            stop music fadeout 2.5
 
             l "Mr. Castillo... are you not basing your accusations on prejudice?"
             l "That may have been just a very curious fellow."
@@ -752,6 +755,7 @@ label stables_inves:
                 with fade
             
             hide screen ce_ui
+            hide screen status_indicator
             lt "I'm not about to let this guy frame me for murder."
             lt "Thankfully, he's already made one grave mistake while spewing his falsehoods."
             jump vs_sebCE2
@@ -837,6 +841,7 @@ label act3_continue3:
     s "He attacked that trainer, then moved his body away from the stables!"
     
     hide screen status_indicator
+    stop music fadeout 2.5
     l "So... you stand by your accusation."
     s "You don't get to where I am by retracting at the slightest error."
     lt "It's been several errors."
@@ -900,6 +905,7 @@ label act3_continue3:
     
 
     hide screen ce_ui
+    hide screen status_indicator
     lt "Parts of his explanation are too vague. I should press for details."
     lt "He's bound to mess up, that will be my chance to counter attack."
     jump vs_sebCE_3
@@ -1075,6 +1081,7 @@ label bigCE_loop:
     c "I took Dama de Plata to the racetrack at 10 AM sharp to practice. We stayed there until the body was discovered."
     
     hide screen status_indicator
+    stop music fadeout 2.5
     scene placeholder_racetrack1
     with fade
     lt "Yikes... talk about an overload of information!"
@@ -1267,7 +1274,8 @@ label bigCE_loop:
             with fade
     # BigCE End
 
-    hide screen ce_ui 
+    hide screen ce_ui
+    hide screen status_indicator
     lt "Let's go over everything... Assuming my math hasn't gotten rusty..."
     lt "Lorenzo, Sebastian, and the inspector were together at the luxury observatory from 10 AM until 10:42 AM."
     lt "Renata was at the café since 10 AM. She received a call from Esteban at 10:17 AM.They met at 10:24 AM at the cafe before heading off for the racetrack."
@@ -2487,6 +2495,7 @@ label debug:
         e "I realize that this was the wrong thing to do. My apologies."
        
         hide screen status_indicator
+        stop music fadeout 2.5
         scene placeholder_racetrack1
         show est frown
         with fade
@@ -2968,6 +2977,8 @@ label LastCE:
     call fx_testimony
     show est yell
     with fade
+    stop music
+    play music ce2 fadein 2.5
     
     e "There's no reason for me to kill Vicente!"
     
@@ -2991,6 +3002,7 @@ label LastCE:
     
     scene placeholder_racetrack1
     hide screen status_indicator
+    stop music fadeout 2.5
     show leo think closed at slightleft
     show est grit-red at slightright
     with fade
@@ -3010,6 +3022,8 @@ label LastCE:
     show est yell
     with fade
     call CE_start
+    stop music
+    play music ce2 fadein 1.0 fadeout 1.0
     
     e "There's no reason for me to kill Vicente!"
     if ce_mode == "object":

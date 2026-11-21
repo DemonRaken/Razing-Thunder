@@ -288,3 +288,15 @@ translate spanish strings:
     old "Jump to DeleteMe"
     new ""
 
+# TODO: Translation updated at 2026-11-20 21:41
+
+translate spanish strings:
+
+    # game/debug_room.rpy:11
+    old "Testimony"
+    new "Testimonio"
+
+    # game/debug_room.rpy:15
+    old "Interrogation"
+    new "Interrogatorio"
+

@@ -215,7 +215,8 @@ translate spanish racetrack1_1d7e9e93:
 translate spanish racetrack1_78b64d91:
 
     # tt "Resisting the urge to aura farm on the balcony, I focus on the competitors here. Most of them seem to be taking their horses for a trot, while a handful are having trouble calming down their restless"
-    tt "Resistiendo las ganas de ir farmear aura al balcón, me concentro en los competidores de acá. La mayoría parece estar sacando a sus caballos a trotar, mientras que un par tiene problemas para calmar a sus animales"
+    tt "Resistiendo las ganas de ir farmear aura al balcón, me concentro en los competidores de acá."
+    tt "La mayoría parece estar sacando a sus caballos a trotar, mientras que un par tiene problemas para calmar a sus animales."
 
 # game/act2.rpy:89
 translate spanish racetrack1_8d0ebde2:
@@ -959,7 +960,8 @@ translate spanish paddock1_topic1_78412bbd:
 translate spanish paddock1_topic1_c774c62a:
 
     # e "That's very admirable. Unfortunately, there isn't much we can tell you. We double-checked the water supply and the food used here for signs of foul play, but everything seems clean."
-    e "Eso es muy noble de tu parte. Lamentablemente, no hay mucho que podamos decirte. Revisamos dos veces el suministro de agua y la comida que se usa acá por si había señales de sabotaje, pero todo parece estar en orden."
+    e "Eso es muy noble de tu parte. Lamentablemente, no hay mucho que podamos decirte." 
+    e "Revisamos dos veces el suministro de agua y la comida que se usa acá por si había señales de sabotaje, pero todo parece estar en orden."
 
 # game/act2.rpy:390
 translate spanish paddock1_topic1_c059de31:
