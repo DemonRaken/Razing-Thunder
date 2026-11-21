@@ -162,3 +162,19 @@ translate spanish ce_penalty_d90cc6c8:
     # n "He never woke up."
     n ""
 
+# TODO: Translation updated at 2026-11-20 22:35
+
+translate spanish strings:
+
+    # game/CE.rpy:19
+    old "Press"
+    new "Presionar"
+
+    # game/CE.rpy:22
+    old "Present"
+    new "Presentar"
+
+    # game/CE.rpy:28
+    old "Reputation"
+    new "Reputación"
+

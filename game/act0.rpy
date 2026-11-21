@@ -46,8 +46,8 @@ label start:
     #     blur 150
     #     linear 3.0 blur 0
     # menu:
-    #     "Jump to CE1 (vs Seb)":
-    #         jump vs_seb_Testimony
+    #     "Jump to Portal":
+    #         jump act3_continue4
     #     # "Jump to Act I":
     #     #     jump act1
     #     #  "Jump to Act II":
@@ -62,4 +62,4 @@ label start:
     #         jump bigCE
     #     "Jump to Ending":
     #         call ending_sequence
-    return
+    # return

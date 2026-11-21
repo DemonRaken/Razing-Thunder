@@ -660,7 +660,8 @@ translate spanish racetrack1_topic2_e9ba8a62:
 translate spanish racetrack1_topic2_0e433f86:
 
     # lu "We don't really know. It's not like he came to tell us before quitting. Some say he got cut off from Moreno's team after being caught red-handed carrying out her orders…"
-    lu "La verdad no sabemos. No es que haya venido a contarnos antes de renunciar. Algunos dicen que lo echaron del equipo de Moreno después de que lo agarraron con las manos en la masa cumpliendo sus órdenes…"
+    lu "La verdad no sabemos. No es que haya venido a contarnos antes de renunciar."
+    lu "Algunos dicen que lo echaron del equipo de Moreno después de que lo agarraron con las manos en la masa cumpliendo sus órdenes…"
 
 # game/act2.rpy:251
 translate spanish racetrack1_topic2_6aef60ad:
@@ -1659,7 +1660,8 @@ translate spanish stables1_complete_6584da00:
 translate spanish stables1_complete_877bdbab:
 
     # c "It ruins the reputation of any self-respecting trainer who wants a future in the industry. Most don't want to be caught up in some blackmail scheme or be told to sabotage the racehorses. Ridiculous…"
-    c "Arruina la reputación de cualquier entrenador que se precie y quiera tener futuro en el rubro. La mayoría no quiere que lo metan en algún esquema de extorsión o que le pidan que sabotee a los caballos. Ridículo…"
+    c "Arruina la reputación de cualquier entrenador que se precie y quiera tener futuro en el rubro." 
+    c "La mayoría no quiere que lo metan en algún esquema de extorsión o que le pidan que sabotee a los caballos. Ridículo…"
 
 # game/act2.rpy:705
 translate spanish stables1_complete_1370ddb0:
@@ -2031,7 +2033,8 @@ translate spanish lockers1_topic1_5ac61dcc:
 translate spanish lockers1_topic1_ad55210f:
 
     # en "Top professional jockeys gathered in one place, carefully selected based on their records and achievements. State-of-the-art facilities! A jaw-dropping prize of SEVEN AND A HALF MILLION"
-    en "¡Los mejores jinetes profesionales reunidos en un solo lugar, cuidadosamente seleccionados por sus récords y logros! ¡Instalaciones de última generación! ¡Un premio que quita el aliento de SIETE MILLONES Y MEDIO"
+    en "¡Los mejores jinetes profesionales reunidos en un solo lugar, cuidadosamente seleccionados por sus récords y logros! ¡Instalaciones de última generación!"
+    en "¡Un premio que quita el aliento de SIETE MILLONES Y MEDIO"
 
 # game/act2.rpy:867
 translate spanish lockers1_topic1_5b77d2c0:

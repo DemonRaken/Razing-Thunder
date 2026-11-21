@@ -269,7 +269,8 @@ translate spanish act1_0f65d98f_1:
 translate spanish act1_693f6bbe:
 
     # lt "I grip the reins and ride away from the thug. Looking over my shoulder, I can discern the blue light of a patrol car shining on the walls of the alleyway on the other end. Officers begin to shout"
-    lt "Agarro las riendas y me alejo del matón. Mirando por encima de mi hombro, distingo la luz azul de un patrullero brillando en las paredes del callejón del otro extremo. Los oficiales empiezan a gritar"
+    lt "Agarro las riendas y me alejo del matón. Mirando por encima de mi hombro, distingo la luz azul de un patrullero"
+    lt "brillando en las paredes del callejón del otro extremo. Los oficiales empiezan a gritar"
 
 # game/act1.rpy:95
 translate spanish act1_8fb67607:
@@ -708,7 +709,8 @@ translate spanish idk_bc34f684:
 translate spanish idk_2af36264:
 
     # c "…I said your caretaker abilities didn't matter. But you should be aware of your employer's status, lest your ignorance makes you behave in a way that embarrasses me in public."
-    c "…Dije que tus habilidades de cuidador no importaban. Pero deberías estar al tanto del estatus de tu empleadora, no vaya a ser que tu ignorancia te haga actuar de una forma que me avergüence en público."
+    c "…Dije que tus habilidades de cuidador no importaban. Pero deberías estar al tanto del estatus de tu empleadora," 
+    c "no vaya a ser que tu ignorancia te haga actuar de una forma que me avergüence en público."
 
 # game/act1.rpy:315
 translate spanish idk_43c186c4:

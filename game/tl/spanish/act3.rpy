@@ -9125,4 +9125,161 @@ translate spanish choose_thugs_48847592:
 translate spanish choose_thugs_e8cce576:
 
     # l "...but even then, things carried on as usual. And the truth was lost forever."
-    l "...pero aun así, las cosas siguieron como de costumbre. Y la verdad se perdió para siempre."
+    l "...pero aun así, las cosas siguieron como de costumbre. Y la verdad se perdió para siempre."# TODO: Translation updated at 2026-11-20 22:35
+
+# game/act3.rpy:703
+translate spanish vs_sebCE2_loop_ca82f719:
+
+    # s "I overlooked his questionable appearance, given that he's Catalina's trainer..."
+    s ""
+
+# game/act3.rpy:710
+translate spanish vs_sebCE2_loop_f43560c3:
+
+    # l "My- *cough* what is so questionable about that young man's appearance?"
+    l ""
+
+# game/act3.rpy:711
+translate spanish vs_sebCE2_loop_014c09d7:
+
+    # s "That unrefined hair, that nasty scar on his face, the ugly boots... need I go on?"
+    s ""
+
+# game/act3.rpy:712
+translate spanish vs_sebCE2_loop_ef0ab8fe:
+
+    # lt "I'm not taking fashion advice from the guy wearing two rolexs on his arm!"
+    lt ""
+
+# game/act3.rpy:716
+translate spanish vs_sebCE2_loop_e08839d1:
+
+    # s "But no more! He's clearly a suspicious person!"
+    s ""
+
+# game/act3.rpy:724
+translate spanish vs_sebCE2_loop_237d2e3b:
+
+    # lt "What makes you so sure about that?"
+    lt ""
+
+# game/act3.rpy:725
+translate spanish vs_sebCE2_loop_cfedce39:
+
+    # s "I'm getting there, mask freak! Stop interrupting me."
+    s ""
+
+# game/act3.rpy:728
+translate spanish vs_sebCE2_loop_65bdacde:
+
+    # s "We all saw him prodding and standing near the body."
+    s ""
+
+# game/act3.rpy:736
+translate spanish vs_sebCE2_loop_96374245:
+
+    # l "Uh... perhaps he was just trying to help the downed man?"
+    l ""
+
+# game/act3.rpy:737
+translate spanish vs_sebCE2_loop_9fbc0afc:
+
+    # s "Now he's a parademic? Please!"
+    s ""
+
+# game/act3.rpy:738
+translate spanish vs_sebCE2_loop_e42b53cd:
+
+    # lt "I do know some first aid..."
+    lt ""
+
+# game/act3.rpy:741
+translate spanish vs_sebCE2_loop_493a6318:
+
+    # s "Who does that? A cold blooded murderer!"
+    s ""
+
+# game/act3.rpy:749
+translate spanish vs_sebCE2_loop_01ac028c:
+
+    # l "It's a bit of a stretch to label him a murderer just for that!"
+    l ""
+
+# game/act3.rpy:750
+translate spanish vs_sebCE2_loop_ba83a2db:
+
+    # s "Say what you want, the police should just arrest him and let us run things here!"
+    s ""
+
+# game/act3.rpy:751
+translate spanish vs_sebCE2_loop_e4c92bfd:
+
+    # lt "I don't know if I'll be so lucky twice if I end up there again. "
+    lt ""
+
+# game/act3.rpy:755
+translate spanish vs_sebCE2_loop_f13c1117:
+
+    # s "He attacked that poor old man at the grandstands, then dropped him from high-up!"
+    s ""
+
+# game/act3.rpy:766
+translate spanish vs_sebCE2_loop_75048330:
+
+    # l "He dropped him right after the attack?"
+    l ""
+
+# game/act3.rpy:767
+translate spanish vs_sebCE2_loop_b393e8b8:
+
+    # s "Are your ears clogged? Yes!"
+    s ""
+
+# game/act3.rpy:768
+translate spanish vs_sebCE2_loop_fd4f06f7:
+
+    # l "That would mean Mr. Ruiz was assaulted at the top of the grandstands, yes?"
+    l ""
+
+# game/act3.rpy:769
+translate spanish vs_sebCE2_loop_6fef3bc9:
+
+    # s "Who?"
+    s ""
+
+# game/act3.rpy:770
+translate spanish vs_sebCE2_loop_398d4c89:
+
+    # l "...the victim."
+    l ""
+
+# game/act3.rpy:771
+translate spanish vs_sebCE2_loop_fcd6990c:
+
+    # s "Oh. Yes. Don't make me repeat the same over and over!"
+    s ""
+
+# game/act3.rpy:772
+translate spanish vs_sebCE2_loop_9857e5ba:
+
+    # lt "I will when you stop contradicting yourself over and over."
+    lt ""
+
+# game/act3.rpy:777
+translate spanish vs_sebCE2_loop_e22cb570:
+
+    # lt "I'm not about to let this guy frame me for murder."
+    lt ""
+
+# game/act3.rpy:778
+translate spanish vs_sebCE2_loop_18cb6ce7:
+
+    # lt "Thankfully, he's already made one grave mistake while spewing his falsehoods."
+    lt ""
+
+translate spanish strings:
+
+    # game/act3.rpy:1029
+    old "no idea"
+    new ""
+
