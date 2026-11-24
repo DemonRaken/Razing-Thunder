@@ -81,12 +81,15 @@ image takethat:
     Null()
 
 label cutin(name):
+    $ quick_menu = False
     $ dur = getattr(renpy.store, f"{name}_duration_sum")
     $ sfx = getattr(renpy.store, f"{name}_sfx")
     $ renpy.sound.play(sfx)
     $ renpy.show(name)
     pause dur
     $ renpy.hide(name)
+    $ renpy.block_rollback()
+    $ quick_menu = True
     return   
 
 #xysize=(config.screen_width, config.screen_height)

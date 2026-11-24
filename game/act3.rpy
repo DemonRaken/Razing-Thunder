@@ -123,10 +123,12 @@ label act3:
         show seb smile2
         s "So you see, this is but a tragic accident."
 
+        show en neutral
+
         en "It is quite regrettable… however, these things can happen. I will take care of it."
 
         tt "With a snap of his fingers, security staff begin to approach from within the crowd. Oh no, are they already going to dispose of the body…?"
-
+        show me sweat2
         me "Tch, you're pulling that card now?"
 
         tt "Whatever reinforcements the inspector could call, they'll arrive too late. By then, some evidence might be lost."
@@ -135,6 +137,7 @@ label act3:
 
         menu:
             "Speak up and intervene.":
+                call cutin("holdit")
                 jump intervene
             "Stay quiet and watch things play out.":
                 jump silent
@@ -151,30 +154,38 @@ label act3:
             return
 label intervene:
     stop music
-    t "Wait a moment! This is no accident! It's murder."
+    t det yell "Wait a moment! This is no accident! It's murder."
+
+    show me sweat
 
     me "Ortiz..."
 
+    show seb angry3
     s "Hah? Wait a moment, y-you...! What are you doing-"
-
+    
+    show seb angry
     s "I mean... what are you saying? Didn't you hear what all these people said already?"
 
-    tt "Hmph. Surprised I'm still hanging around...?"
+    tt what det neutral "Hmph. Surprised I'm still hanging around...?"
 
-    t "I did. But that doesn't make it an accident."
-
+    t det neutral "I did. But that doesn't make it an accident."
+    
+    show seb neutral 
     s "As expected of a country bumpkin, I'll have to explain it nice and slow for you to understand..."
 
 #Tony vs Seb
 label vs_seb_Testimony:
     scene placeholder_paddock
     call fx_testimony
-    show seb smile3
+    show seb neutral
     with fade
-    
+    show seb angry
     s "Get this through your thick skull: this was an accident."
+    show seb neutral
     s "He fell down from the grandstands and died when he hit the floor."
+    show seb smile2
     s "It's obvious! The fall killed him! Those bruises and injuries are exactly what you'd expect from such a fall! There's nothing suspicious here!"
+    show seb grr    
     s "Now, get out of the way so these gentlemen can do their job."
     
     hide screen status_indicator
@@ -188,10 +199,10 @@ label vs_seb_Testimony:
 label vs_sebCE:
     scene placeholder_paddock
     call fx_interrogation
-    show seb smile3
+    show seb neutral
     with fade
     call CE_start
-    
+    show seb angry
     s "Get this through your thick skull: this was an accident."
     if ce_mode == "object":
         call cutin("objection")
@@ -200,9 +211,10 @@ label vs_sebCE:
         $ ce_mode = None
         call cutin("holdit")
         t "Why are you so sure about that?"
+        show seb grr
         s "I'm getting to it, you impatient dolt! Hmph..."
         with fade
-    
+    show seb neutral
     s "He fell down from the grandstands and died when he hit the floor."
     if ce_mode == "object":
         call cutin("objection")
@@ -211,9 +223,10 @@ label vs_sebCE:
         $ ce_mode = None
         call cutin("holdit")
         t "Would a fall from that height actually kill him?"
+        show seb grr
         s "H-He's dead, isn't he? So obviously it is!"
         with fade
-
+    show seb smile2
     s "It's obvious! The fall killed him! Those bruises and injuries are exactly what you'd expect from such a fall! There's nothing suspicious here!"
     if ce_mode == "object":
         call cutin("objection")
@@ -225,11 +238,12 @@ label vs_sebCE:
         $ ce_mode = None
         call cutin("holdit")
         t "And you're sure those injuries were all caused by the fall?"
+        show seb neutral
         s "Of course! What else could've caused them? Stop wasting my time!"
         tt "Hold on... Is that really the case? Something about his injuries doesn't add up."
         with fade
 
-
+    show seb grr
     s "Now, get out of the way so these gentlemen can do their job."
     if ce_mode == "object":
         call cutin("objection")
@@ -238,8 +252,9 @@ label vs_sebCE:
         $ ce_mode = None
         call cutin("holdit")
         t "I think you're jumping the gun a bit, trying to clean up so fast!"
+        show seb angry
         s "Mr. Villareal here has an event to run. The more time we waste on this, the more things will go off schedule."
-        t "Zero thoughts spared for the victim here.."
+        tt "Zero thoughts spared for the victim here.."
         with fade
 
     hide screen ce_ui
@@ -254,64 +269,93 @@ label vs_sebCE:
         show seb smile
         s "Wait a moment, I have to check the time on my watches."
         t "Eh?"
+        show seb smile3
         s "I was afraid of this. It does seem like it's 'listen to stupid' o'clock right now."
         t "Gah!!"
-        $ ce_rep -= 1
+        call ce_penalty(1)
         t "Damn. Looks like I was wrong..."
         # Penalty Damage
-        $ ce_rep -= 1
         with fade
         return
     
     label vs_sebCE_right:
         $ ce_mode = None
-        $ ce_rep += 2
+        $ ce_rep += 0.5
         call CE_end
         jump act3_continue
  
     label act3_continue:
     hide screen status_indicator
-    
-
+    hide seb
+    show tony neutral closed at slightleft
+    with dissolve
     t "It's true that, depending on how he landed, a fall from that height could have killed him..."
-
+    
+    show seb smile3 at slightright
+    with dissolve
     s "So you get it! Now, do us all a favor and—"
-
+    
+    show tony det yell
     t "However! There's something you're overlooking."
 
+    show seb frown
     s "Huh?"
 
+    show tony det neutral right
     t "Look at his arms. They're just lying at his sides, without any sign of him trying to break his fall."
 
+    show seb grr
     s "A-And? Maybe he didn't have time to react!"
 
+    show tony det neutral
     t "Maybe. But there's something else. His face and the front of his body are covered in bruises, as if he took the full impact of the fall face-first."
 
+    show seb angry3
+    with dissolve
     s "So what!? He fell face-first! That's what happens when you hit the ground!"
 
     t "Then explain this: if the Vicente hit the ground face-first..."
 
     play music objection fadein 0.5
-    
+    show tony det yell
+    with dissolve
     t "Why does he have such a large wound on the BACK of his head!?"
 
+    show seb nervous2 with dissolve
     s "G-Gyaaah!"
-
+    
+    show tony det neutral
     t "If he died from the fall, the damage would match how he landed."
 
+    show seb nervous
     s "T-Then someone hit him AFTER he fell! Yeah! That's what happened!"
-
+    
+    hide seb
+    hide tony
+    show me yell
+    with dissolve
     me "You're just making shit up now. Why would someone come along and hit a corpse?" 
-
+    
+    hide me
+    show tony det neutral
+    with dissolve
     t "And why hasn't a single person here reported seeing anything?"
-
+    
+    hide me
+    hide tony
+    show seb grr2
+    with dissolve
     s "U.....uuunngh....! Then you explain it, genius! Why does that old crook have that wound!?"
-
+    
+    hide seb
+    show tony det neutral
+    with dissolve
     t "I can think of another possibility. The victim got that wound..." 
     jump fall_choice    
     label fall_choice:
         menu:
             "Before falling.":
+                call cutin("takethat")
                 jump b4fall
             "While falling.":
                 jump whilefall
@@ -319,362 +363,460 @@ label vs_sebCE:
                 jump afterfall
 
     label afterfall:
+        hide seb
+        show tony det yell
         t "He got the wound after hitting the ground."
+        
+        hide tony
+        show seb smile2 at slightleft
+        with dissolve
         s "Ah, so you do agree with me!"
+        
+        show me yell at slightright
+        with dissolve
         me "Hold it, isn't this the opposite of what you've been saying?"
+        
+        show me angry
         me "Besides, with all the people here, at least one or two would had seen that happen."
+        
+        hide me
+        hide seb
+        show tony aha
+        with dissolve
         t "Huh? Oh, uh.... yeah! You are right! Ahaha..."
+        
+        show seb smile3 at slightleft
+        show me sweat2 at slightright
+        hide tony
+        with dissolve
         me "..."
+        
+        hide seb
+        hide me
+        show tony aw neutral drop
+        with dissolve
         tt "Ugh, I messed that up big time..."
+        
+        show tony neutral drop
         tt "Calm down, Tony. Let's try that one more time. If he didn't get injured after the fall, then he got it..."
         jump fall_choice
-
     label whilefall:
+        hide seb
+        hide me
+        show tony det yell
         t "The victim was injured while falling."
+        
+        hide tony
+        show me sweat at slightright
+        with dissolve
         me "...while falling. As in, in the middle of the air?"
+        
+        show seb smile2 at slightleft
+        with dissolve
         s "I see. Makes sense."
+        
+        show me yell
         me "No, it doesn't! How on earth would anyone pull that off!? There is nowhere to stand on! Just air!"
+        
+        hide seb
+        hide me
+        show tony aw smile drop
+        with dissolve
         t "O-Oh, you know! Like, maybe someone was waiting below, suspended with a grappling hook!"
+        
+        show tony det yell
         t "Then the body approached, and they hit him with a well-timed strike! Hard!"
+        
+        hide tony
+        show seb smile3 at slightleft
+        show me angry at slightright
+        with dissolve
         me "First off, that's insane. Second, you are insane."
+        
+        hide seb
+        hide me
+        show tony neutral drop
+        with dissolve
         tt "I don't think it's that unlikely... r-right?"
+        
+        hide tony
+        show seb smile3 at slightleft
+        show me sweat at slightright
         me "Third, weren't you the one who said he fell face-first, with his arms by his side?"
+        
+        show me sweat2
         me "If the victim got hit during his fall, that would change the trajectory of his fall."
+        show me neutral
         me "What if the person miscalculated and missed? What if they couldn't muster enough strength due to that awkward position?"
+        show me yell
         me "Not to mention, a person hanging from a grappling hook is incredibly suspicious."
-        t "A-All very good points...!"
+        
+        hide me
+        hide seb
+        show tony neutral drop
+        with dissolve
+        t neutral drop "A-All very good points...!"
+        show tony aw neutral drop
         tt "Shit... I need to re-think this. It is a little crazy to think it happened mid-air. So then, that must mean he got it..."
         jump fall_choice
 
 label b4fall:
+    hide me
+    hide seb
+    show tony neutral
+    with dissolve
     t "What if he was struck on the back of the head before he ever went over the railing?"
-
+    
+    show tony neutral closed
     t "He would've already been dead by then. His body would've fallen limp, unable to protect itself when it hit the ground."
 
+    show tony det yell
     t "That would explain both the position of his body and the bruises on his front."
-
+    
+    hide tony
+    show me smile
+    with dissolve
     me "Seems to me like there's now more than enough reason to start an investigation."
-
+    
+    show me smile3
     me "Obviously, you won't get in the way, right? Mr. Villareal?"
-
+    
+    show en nervous2
+    with dissolve
     en "N-no, of course not... I can't in good conscience let a murderer roam free..."
 
+    show me neutral
     me "Good. Now, follow me, everyone. I need to have a good talk with all of you about your whereabouts."
 
     stop music fadeout 2.5
 
-    tt "The inspector is taking everyone back to the main racetrack. \nWhew, that was a close one..."
-    tt "...but this is no time to be resting. I have to find out as much as I can. Who knows what other crap that guy Castillo will try to pull off?"
-    tt "First, I need to make a quick stop to the trainer lockers..."  
+    tt aw neutral drop "The inspector is taking everyone back to the main racetrack. \nWhew, that was a close one..."
+    tt det neutral "...but this is no time to be resting. I have to find out as much as I can. Who knows what other crap that guy Castillo will try to pull off?"
+    tt det smile "First, I need to make a quick stop to the trainer lockers..."
+    jump act3_main_inves  
 
     
     #InvestigationsAreasNow, access from map
-label paddock_inves:
-    scene placeholder_paddock
-    with fade
-    lt "There. Now I'm dressed for the occasion. El Leopardo is on the case...!"
+# label paddock_inves:
+#     scene placeholder_paddock
+#     with fade
+#     lt "There. Now I'm dressed for the occasion. El Leopardo is on the case...!"
 
-    lt "Huh. The police officers watching over the scene aren't trying to detain me. I guess the inspector gave them a heads-up? Much appreciated!"
-    lt "Time to take a good look around and figure out what happened."
-    play music inves fadein 2.5
-    #Points to click: just the body.
-    #When done so, zoom in on it.
-    lt "I should examine the body more closely... Let's see."
-    lt "There's that deep, nasty wound on the back of his head... and the bruises on the front..."
-    lt "...Huh? This looks like dirt, but it doesn't match the ground around the parade ring. There's something else mixed in..."
-    lt "Is this... bits of hay? Huh."
-    lt "Maybe I should check the stables..."
+#     lt "Huh. The police officers watching over the scene aren't trying to detain me. I guess the inspector gave them a heads-up? Much appreciated!"
+#     lt "Time to take a good look around and figure out what happened."
+#     play music inves fadein 2.5
+#     #Points to click: just the body.
+#     #When done so, zoom in on it.
+#     lt "I should examine the body more closely... Let's see."
+#     lt "There's that deep, nasty wound on the back of his head... and the bruises on the front..."
+#     lt "...Huh? This looks like dirt, but it doesn't match the ground around the parade ring. There's something else mixed in..."
+#     lt "Is this... bits of hay? Huh."
+#     lt "Maybe I should check the stables..."
 
-    #Investigation start Sign or animation or something.
+#     #Investigation start Sign or animation or something.
 
-label racetrack_inves:
-        scene placeholder_granstands
-        with fade
-        #Inves point Vip Lunge box
-        lt "It's closed off for now, with police officers standing guard."
-        lt "If I had to guess, Inspector Medina is questioning people inside."
-        lt "I swear... Lorenzo must be fighting like hell to keep anyone from being taken to the police station."
-        #railing
-        lt "That's a long way down... Judging by the distance between this railing and the ground, I don't think someone could just trip and fall over it. It practically reaches my neck."
-        lt "You'd have to deliberately climb over it to jump... or have someone throw you over."
+# label racetrack_inves:
+#         scene placeholder_granstands
+#         with fade
+#         #Inves point Vip Lunge box
+#         lt "It's closed off for now, with police officers standing guard."
+#         lt "If I had to guess, Inspector Medina is questioning people inside."
+#         lt "I swear... Lorenzo must be fighting like hell to keep anyone from being taken to the police station."
+#         #railing
+#         lt "That's a long way down... Judging by the distance between this railing and the ground, I don't think someone could just trip and fall over it. It practically reaches my neck."
+#         lt "You'd have to deliberately climb over it to jump... or have someone throw you over."
     
-label stables_inves:
-    scene placeholder_stables
-    with fade
-    lt "Hey Chispa. Hope you weren't feeling too lonely without me."
-    lt "Wait... this place feels... off. Something's different."
+# label stables_inves:
+#     scene placeholder_stables
+#     with fade
+#     lt "Hey Chispa. Hope you weren't feeling too lonely without me."
+#     lt "Wait... this place feels... off. Something's different."
 
-    screen aai_examine_stables():
-        imagemap:
-            idle "placeholder_stables"
-            hover Transform("placeholder_stables",  matrixcolor=BrightnessMatrix(0.3))
-            hotspot (1327, 205, 369, 673) action Call("stables_blood")
-            hotspot (344, 479, 652, 361) action Call("stables_shovel")
+#     call screen aai_examine_stables
     
-    label stables_blood:
-        #click mountain of hay
-        lt "Why is there a bunch of hay in the middle of the ground? You'd think the staff would tidy up the place more."
-        lt "Hang on, I can see something underneath it..."
-        lt "Kneeling over, I begin to brush away all of the hay."
-        $ renpy.music.set_volume(0.4, delay=1.0, channel="music")
-        lt "What the...!? This looks like someone's blood...!"
-        lt "...yeah. No doubt about it, this is dried up blood. Moreover, it looks like a few drops lead outside..."
-        lt "Huh? The trail suddenly ends before reaching the entrance."
-        lt "That's weird. I'll notify one of the officers about it. Better safe than sorry."
-        #return
     
-    label stables_shovel:
-    #click shovel
-        $ renpy.music.set_volume(1.0, delay=1.0, channel="music")
-        lt "Wait a minute... What's this doing here?"
+#     label lockers_inves:
+#         scene placeholder_lockers
+#         with fade
+#         l "What's with this locker? It's been left open."
+#         lt "As I walked over to close it, something in there catches my attention."
+#         l "A... hawaiin shirt? A pair of sunglasses, too..."
+#         lt "I guess these must belong to one of the jockeys."
+#         $ dossier.add(de_casualclothes)
 
-        lt "A stable shovel. Someone must've left it behind this stall."
-
-        lt "The blade is covered in something dark and flaky. At first, I thought it was dirt..."
-
-        l "...Wait. Is that blood!?"
-
-        lt "And this dent... Looks like it's been damaged pretty badly."
-
-        lt "A dent and blood... some hairs are caught along the edge. Don't tell me this is..."
-
-        lt "...I should have one of the inspector's subordinates run tests on it right away."
-
-        lt "This here... might be the murder weapon!"
-
-        lt "This is a huge find... but, damn... what a way to go."
-        lt "Alright, what's next...?"
-        #return
+#         l "Hm? Hey, that's a notebook on top of the trousers..."
+#         lt "I do feel bad snooping through someone's belongings, but... it's for the sake of the investigation!"
+#         l "What do we have here... \n... \n...!?"
+#         lt "T-This...! The pages here are full with dates from various derby competitions!"
+#         lt "I recognize some of the horses' names, too..."
+#         lt "Perla Negra is listed here! That's the one they showed on the news!"
+#         l "There's something written next to the name... '$7,000'?"
+#         lt "That's a lot of money... is this a betting record? But ultimately, Perla Negra lost that race..."
         
-    
-    label lockers_inves:
-        scene placeholder_lockers
-        with fade
-        l "What's with this locker? It's been left open."
-        lt "As I walked over to close it, something in there catches my attention."
-        l "A... hawaiin shirt? A pair of sunglasses, too..."
-        lt "I guess these must belong to one of the jockeys."
-        $ dossier.add(de_casualclothes)
-
-        l "Hm? Hey, that's a notebook on top of the trousers..."
-        lt "I do feel bad snooping through someone's belongings, but... it's for the sake of the investigation!"
-        l "What do we have here... \n... \n...!?"
-        lt "T-This...! The pages here are full with dates from various derby competitions!"
-        lt "I recognize some of the horses' names, too..."
-        lt "Perla Negra is listed here! That's the one they showed on the news!"
-        l "There's something written next to the name... '$7,000'?"
-        lt "That's a lot of money... is this a betting record? But ultimately, Perla Negra lost that race..."
+#         lt "...and so did a few of the other listed horses here, now that I think about it."
         
-        lt "...and so did a few of the other listed horses here, now that I think about it."
+#         lt "Their names came up when I first began to look into the incidents."
         
-        lt "Their names came up when I first began to look into the incidents."
+#         lt "Hmm... these horses... their names are all crossed out. The only one that isn't is... 'Lucero'."
+#         l "Lucero... Haven't I heard that name before?"
+#         lt "...! Oh yeah! That's Lucas' horse! But why is $5,000 written next to it...?"
+#         lt "Mmmh... I should really find out who this locker belongs to."
         
-        lt "Hmm... these horses... their names are all crossed out. The only one that isn't is... 'Lucero'."
-        l "Lucero... Haven't I heard that name before?"
-        lt "...! Oh yeah! That's Lucas' horse! But why is $5,000 written next to it...?"
-        lt "Mmmh... I should really find out who this locker belongs to."
+#         l "Does this one have a nameplate? It does. Let's see..."
         
-        l "Does this one have a nameplate? It does. Let's see..."
+#         l "Huh!? Lucas Mendoza?"
         
-        l "Huh!? Lucas Mendoza?"
+#         lt "The hell? Why does he have a notebook listing his own horse?"
         
-        lt "The hell? Why does he have a notebook listing his own horse?"
+#         l "This is so weird... I'll have to look into it further. I should get moving for now."
         
-        l "This is so weird... I'll have to look into it further. I should get moving for now."
-        
-        $ dossier.add(de_notebook)
+#         $ dossier.add(de_notebook)
 
-    label breakroom_intro:
-        lt "I've never been here before, but during the day, I saw Castillo's underlings coming and going through the hallway that leads here."
+#     label breakroom_intro:
+#         lt "I've never been here before, but during the day, I saw Castillo's underlings coming and going through the hallway that leads here."
 
-        lt "There's no mistaking them. They all wear those ridiculously expensive, flashy golden suits."
+#         lt "There's no mistaking them. They all wear those ridiculously expensive, flashy golden suits."
 
-        lt "I think most of them have left by now, but... there might still be someone inside."
+#         lt "I think most of them have left by now, but... there might still be someone inside."
 
-        lt "What should I do? I definitely need to check this place out. And while I could just kick the door down..."
+#         lt "What should I do? I definitely need to check this place out. And while I could just kick the door down..."
 
-        lt "...that would only attract unwanted attention. I don't need them calling for backup. I have to be swift."
+#         lt "...that would only attract unwanted attention. I don't need them calling for backup. I have to be swift."
 
-        l "..."
+#         l "..."
 
-        menu:
-            "Pretend to be room service.":
-                jump roomservice
-            "Make them think there's a fire.":
-                jump fireprank
+#         menu:
+#             "Pretend to be room service.":
+#                 jump roomservice
+#             "Make them think there's a fire.":
+#                 jump fireprank
 
-        label fireprank:
-            lt "I take out my phone and search for a 'fire alarm sound effect' video. I crank the volume all the way up and hit play."
+#         label fireprank:
+#             lt "I take out my phone and search for a 'fire alarm sound effect' video. I crank the volume all the way up and hit play."
 
-            lt "A few seconds later, I hear footsteps rushing toward the door. They're getting closer... Gotta hide!"
+#             lt "A few seconds later, I hear footsteps rushing toward the door. They're getting closer... Gotta hide!"
 
-            tg "AHHHH! FIRE! FIRE!!!"
+#             tg "AHHHH! FIRE! FIRE!!!"
 
-            lt "The underling bolts down the hallway, stumbling over his own feet before disappearing from view."
+#             lt "The underling bolts down the hallway, stumbling over his own feet before disappearing from view."
 
-            l "...Whew. Can't believe that actually worked."
+#             l "...Whew. Can't believe that actually worked."
 
-            lt "I pull the poncho off my head and wait a few seconds to make sure he isn't coming back. Once I'm certain the coast is clear, I slip into the unattended room."
+#             lt "I pull the poncho off my head and wait a few seconds to make sure he isn't coming back. Once I'm certain the coast is clear, I slip into the unattended room."
 
-            lt "Now, let's see what you're hiding in here..."
-            jump breakroom_inves
-        label roomservice:
-            lt "Alright. It's risky, but it just might work."
-            l "*coughs* Room service!"
-            tg "Finally! I was starving!"
-            lt "The voice from inside opens the door."
-            tg "..."
-            tg "Wait..."
+#             lt "Now, let's see what you're hiding in here..."
+#             jump breakroom_inves
+#         label roomservice:
+#             lt "Alright. It's risky, but it just might work."
+#             l "*coughs* Room service!"
+#             tg "Finally! I was starving!"
+#             lt "The voice from inside opens the door."
+#             tg "..."
+#             tg "Wait..."
 
-            tg "We don't get room service delivered all the way out here—"
+#             tg "We don't get room service delivered all the way out here—"
 
-            l "Haah!"
+#             l "Haah!"
 
-            lt "I toss my poncho over the man's face, catching him completely off guard."
+#             lt "I toss my poncho over the man's face, catching him completely off guard."
 
-            tg "!?"
+#             tg "!?"
 
-            lt "He stumbles around, struggling to pull it off. By the time he manages, I've already stepped in close."
+#             lt "He stumbles around, struggling to pull it off. By the time he manages, I've already stepped in close."
 
-            lt "I drive my palm into his jaw."
+#             lt "I drive my palm into his jaw."
 
-            tg "Oof!"
+#             tg "Oof!"
 
-            lt "He crumples to the cold floor, unconscious. I retrieve my poncho and casually sling it back over my shoulder."
+#             lt "He crumples to the cold floor, unconscious. I retrieve my poncho and casually sling it back over my shoulder."
 
-            l "Take five."
+#             l "Take five."
 
-            lt "Now, let's see what you're hiding in here..."
-            jump breakroom_inves
-        label breakroom_inves:
-            lt "This looks like some kind of staff break room."
+#             lt "Now, let's see what you're hiding in here..."
+#             jump breakroom_inves
+#         label breakroom_inves:
+#             lt "This looks like some kind of staff break room."
 
-            lt "A few chairs, a table... Nothing too interesting."
+#             lt "A few chairs, a table... Nothing too interesting."
 
-            lt "Hm...? That looks like a trash bin."
+#             lt "Hm...? That looks like a trash bin."
 
-            lt "Heh... It may look unimportant, but every good detective knows a crucial piece of evidence could be hiding in one of those!"
+#             lt "Heh... It may look unimportant, but every good detective knows a crucial piece of evidence could be hiding in one of those!"
 
-            lt "Well, at least I hope that's the case. Now, what have we got here?"
+#             lt "Well, at least I hope that's the case. Now, what have we got here?"
 
-            lt "Rubbish, empty bottles, cigarettes... That's a fire hazard."
+#             lt "Rubbish, empty bottles, cigarettes... That's a fire hazard."
 
-            lt "...! Hey, there's a black bag underneath all this. It's been crumpled up, too."
+#             lt "...! Hey, there's a black bag underneath all this. It's been crumpled up, too."
 
-            lt "I dig through the rubbish and pull the bag out. Whoa, this thing is way bigger than I expected..."
+#             lt "I dig through the rubbish and pull the bag out. Whoa, this thing is way bigger than I expected..."
 
-            lt "I turn it inside out, and something immediately catches my eye."
+#             lt "I turn it inside out, and something immediately catches my eye."
 
-            lt "What the...? Why is there so much blood in here!?"
+#             lt "What the...? Why is there so much blood in here!?"
 
-            lt "I take a closer look. It's definitely dried blood..."
+#             lt "I take a closer look. It's definitely dried blood..."
 
-            lt "It's stained a large portion of the bag's interior..."
+#             lt "It's stained a large portion of the bag's interior..."
 
-            lt "..."
+#             lt "..."
 
-            lt "Don't tell me... Is this a body bag? How long has this blood been here...?"
+#             lt "Don't tell me... Is this a body bag? How long has this blood been here...?"
 
-            l "Nnh... I need to get this thing analyzed. Pronto."
+#             l "Nnh... I need to get this thing analyzed. Pronto."
             
 
 
-    #Investigation COMPLETE
+#     #Investigation COMPLETE
 
-    label inves_complete:
-        of "Mr. Leopardo, correct?"
-        lt "Ah- one of the police officers working for Medina just approached me."
-        l "Indeed, that would be me! How may I help you?"
-        of "Here is a copy of the preliminary autopsy report."
-        $ dossier.add(de_autopsy)
-        of "We also ran tests of the things you found and have the results. These are copies of them."
-        $ dossier.add(de_shovel)
-        $ dossier.add(de_blooddrops)
-        $ dossier.add(de_bodybag)
+#     label inves_complete:
+#         of "Mr. Leopardo, correct?"
+#         lt "Ah- one of the police officers working for Medina just approached me."
+#         l "Indeed, that would be me! How may I help you?"
+#         of "Here is a copy of the preliminary autopsy report."
+#         $ dossier.add(de_autopsy)
+#         of "We also ran tests of the things you found and have the results. These are copies of them."
+#         $ dossier.add(de_shovel)
+#         $ dossier.add(de_blooddrops)
+#         $ dossier.add(de_bodybag)
         
-        l "Much appreciated, friend! With this, we're one step closer to bringing down the villain behind it!"
-        of "R-Right... that was all."
-        lt "I watch him leave in a hurry."
-        lt "Hmm... I made some solid leeways here. Next, I should check-"
-        "*beep!*"
-        lt "Who's calling me now? ... \nThe inspector?"
-        l "Hello?"
-        me "Get your ass over to the main racetrack. Time's up."
-        l "Uh. What do you mean time's up-"
-        me "It means this stupid event will start in about 30 minutes and I've done all that I can to stop them from leaving."
-        l "That's crazy! They can't go ahead with the race with a killer on the loose!"
-        l "You're with the police! You have the authority to detain them and-"
-        me "Don't tell me what I already know. Just get over here."
-        "*beep*"
-        l "She hung up..."
-        lt "This is messed up. But no matter..."
-        l "...for the ally of justice is here to save the truth! Prepare yourselves, villains!"
+#         l "Much appreciated, friend! With this, we're one step closer to bringing down the villain behind it!"
+#         of "R-Right... that was all."
+#         lt "I watch him leave in a hurry."
+#         lt "Hmm... I made some solid leeways here. Next, I should check-"
+#         "*beep!*"
+#         lt "Who's calling me now? ... \nThe inspector?"
+#         l "Hello?"
+#         me "Get your ass over to the main racetrack. Time's up."
+#         l "Uh. What do you mean time's up-"
+#         me "It means this stupid event will start in about 30 minutes and I've done all that I can to stop them from leaving."
+#         l "That's crazy! They can't go ahead with the race with a killer on the loose!"
+#         l "You're with the police! You have the authority to detain them and-"
+#         me "Don't tell me what I already know. Just get over here."
+#         "*beep*"
+#         l "She hung up..."
+#         lt "This is messed up. But no matter..."
+#         l "...for the ally of justice is here to save the truth! Prepare yourselves, villains!"
 
     label ce1:
         scene placeholder_granstands
         with fade
+        stop music fadeout 2.5
         lt "I rush all the way over here. The inspector is surrounded by officers, Castillo's underlings, and the jockeys..."
 
         lt "Time for my dramatic entrance."
 
+        show en nervous2 at slightleft
+        with dissolve
         en "Once again, I understand your concerns, Inspector, but I simply cannot afford to cancel the event again."
 
+        show me angry at slightright
+        with dissolve
         me "Then you clearly don't understand the situation."
 
+        show en nervous3
         en "I promise you, once the race is over, you'll have my full cooperation!"
 
+        show me yell2
         me "That's not how this works. You have to—"
 
         l "—look past your selfish desires and face your responsibilities!"
-
+        
+        show me yell
         me "Exactly—wait, what?"
+        
+        hide me
+        hide en
+        show leo grin shine
+        with vpunch
+        with dissolve
 
         lt "With a running leap and a flip, I let my poncho flutter dramatically through the air before striking a pose with my arms."
 
+        show leo yell
+
         l "The nightmare of criminals and fighter for justice..."
 
+        show leo think yell
+        with flash
+
         l "El Leopardo is here to assist!"
-
+        
+        hide leo
+        show me sweat2
+        with dissolve
         me ".............."
-
+        
+        show rena angry at left
+        with dissolve
         r "Yo. What's this freak's deal?"
 
+        show cata surprise at right
+        with dissolve
         c "...?"
-
+        
+        hide cata
+        hide me
+        hide rena
+        show en yell
+        with dissolve
         en "E-Excuse me? Sir, I don't know what kind of game you're playing here, but—"
 
-        l "This is no game. This is a matter of life and death, and you're trying to look the other way!"
-
+        l neutral "This is no game. This is a matter of life and death, and you're trying to look the other way!"
+        
+        show en neutral
         en "Erm... Well, we're already behind schedule, you see..."
-
+        
+        hide en
+        show me angry at slightright
+        with dissolve
         me "Despicable..."
-
+        
+        show seb grr2 at slightleft
+        with dissolve
         s "What are you waiting for!? Kick this clown out of my derby—"
 
+        hide seb grr2
+        hide me
         show en neutral
         pause 1.0
 
+        hide en
+        show seb frown
+        with dissolve
         s "I mean... kick him out of your derby already! He's a lunatic!"
 
-        l "Ah, but would you still say the same if I offered you the answers to this case?"
+        l smile "Ah, but would you still say the same if I offered you the answers to this case?"
 
+        show seb smile2
         s "The answers? Don't kid yourself! What would a masked freak like you know?"
 
-        l "Quite a lot, actually, Mr. Castillo. For instance, I know you have a habit of siccing your men on people who inconvenience you."
+        l neutral "Quite a lot, actually, Mr. Castillo. For instance, I know you have a habit of siccing your men on people who inconvenience you."
 
+        show seb nervous
         s "WHAT!? I, uh... I don't know what he's talking about. I would never..."
 
+        hide seb
+        show me angry
+        with dissolve
         me "..."
 
+        hide me
+        show seb angry
+        with dissolve
         s "More importantly, there's no need to waste any more time on this!"
-
+        
+        show seb smile
         s "We already know who the culprit is!"
 
-        lt "If it's coming from this guy, I seriously doubt it..."
-
+        lt eh neutral "If it's coming from this guy, I seriously doubt it..."
+        
+        show seb smile3
         s "It was that suspicious character found near the body: Antonio Ortiz!"
 
-        l "Say whaaaaaat!?"
+        l yell "Say whaaaaaat!?"
+
+        show seb smile2
 
         s "Yes, yes. Allow me to enlighten you."
 
@@ -683,31 +825,55 @@ label stables_inves:
         # contra 1: tony killed him at the top of the railings
         label vs_sebCE2:
             scene placeholder_racetrack1
-            show seb smile3
+            show seb neutral
             with fade
             call fx_testimony
+            
             s "I overlooked his questionable appearance, given that he's Catalina's trainer..."
+            show seb grr
             s "But no more! He's clearly a suspicious person!"
+            show seb angry
             s "We all saw him prodding and standing near the body."
+            show seb grr
             s "Who does that? A cold blooded murderer!"
+            show seb grr2
             s "He attacked that poor old man at the grandstands, then dropped him from high-up!"
 
             hide screen status_indicator
             stop music fadeout 2.5
-
+            
+            show leo think closed at slightleft
+            with dissolve
             l "Mr. Castillo... are you not basing your accusations on prejudice?"
+            
+            show leo neutral
             l "That may have been just a very curious fellow."
+            
+            show seb angry2 at slightright
+            with dissolve 
             s "How dare you! My words are very well-founded!"
+            
+            show seb neutral
             s "Now, if you're done parroting, I believe the inspector has a criminal to catch."
+            
+            show leo grin
             l "Of course. Right as we're done going over your testimony."
+            
+            show seb frown
             s "Not this again... I'm getting déjà vu."
+            
+            show leo think closed
             lt "Yeah, and I'm getting déjà vu too. A glaring contradiction, that is."
+            
+            show leo think yell
             lt "After all the investigating I've done, I know this guy is dead wrong!"
             lt "Now I just have to prove it!"
-
-        label vs_sebCE2_loop:
+        
+        call cutin("cross_examination")
+        label vs_sebCE2_loop hide: # Before hide was learned.
             call CE_start
             call fx_interrogation
+            show seb neutral
             s "I overlooked his questionable appearance, given that he's Catalina's trainer..."
             if ce_mode == "object":
                 call cutin("objection")
@@ -715,12 +881,15 @@ label stables_inves:
             if ce_mode == "press":
                 $ ce_mode = None
                 call cutin("holdit")
-                l "My- *cough* what is so questionable about that young man's appearance?"
+                l eh neutral drop "My- *cough* what is so questionable about that young man's appearance?"
+                
+                show seb smile2
                 s "That unrefined hair, that nasty scar on his face, the ugly boots... need I go on?"
-                lt "I'm not taking fashion advice from the guy wearing two rolexs on his arm!"
+                
+                lt yell "I'm not taking fashion advice from the guy wearing two rolexs on his arm!"
                 with fade
             
-
+            show seb grr
             s "But no more! He's clearly a suspicious person!"
             if ce_mode == "object":
                 call cutin("objection")
@@ -729,10 +898,11 @@ label stables_inves:
             if ce_mode == "press":
                 $ ce_mode = None
                 call cutin("holdit")
-                lt "What makes you so sure about that?"
+                lt neutral "What makes you so sure about that?"
+                show seb grr
                 s "I'm getting there, mask freak! Stop interrupting me."
                 with fade
-            
+            show seb angry
             s "We all saw him prodding and standing near the body."
             if ce_mode == "object":
                 call cutin("objection")
@@ -741,11 +911,14 @@ label stables_inves:
             if ce_mode == "press":
                 $ ce_mode = None
                 call cutin("holdit")
-                l "Uh... perhaps he was just trying to help the downed man?"
+                l grin closed "Uh... perhaps he was just trying to help the downed man?"
+                
+                show seb neutral
                 s "Now he's a parademic? Please!"
-                lt "I do know some first aid..."
+                
+                lt closed drop "I do know some first aid..."
                 with fade
-
+            show seb grr
             s "Who does that? A cold blooded murderer!"
             if ce_mode == "object":
                 call cutin("objection")
@@ -754,12 +927,15 @@ label stables_inves:
             if ce_mode == "press":
                 $ ce_mode = None
                 call cutin("holdit")
-                l "It's a bit of a stretch to label him a murderer just for that!"
+                l yell "It's a bit of a stretch to label him a murderer just for that!"
+                
+                show seb angry
                 s "Say what you want, the police should just arrest him and let us run things here!"
-                lt "I don't know if I'll be so lucky twice if I end up there again.
+                
+                lt closed drop "I don't know if I'll be so lucky twice if I end up there again.
                 "
                 with fade
-            
+            show seb grr2
             s "He attacked that poor old man at the grandstands, then dropped him from high-up!"
             #p - contra is here , blood drops
             if ce_mode == "object":
@@ -771,91 +947,176 @@ label stables_inves:
             if ce_mode == "press":
                 $ ce_mode = None
                 call cutin("holdit")
-                l "He dropped him right after the attack?"
+                l neutral "He dropped him right after the attack?"
+                show seb angry
                 s "Are your ears clogged? Yes!"
+                
                 l "That would mean Mr. Ruiz was assaulted at the top of the grandstands, yes?"
+                show seb frown
                 s "Who?"
-                l "...the victim."
+                
+                l eh what "...the victim."
+                
+                show seb smile2
                 s "Oh. Yes. Don't make me repeat the same over and over!"
-                lt "I will when you stop contradicting yourself over and over."
+                
+                with flash
+                lt think closed "I will when you stop contradicting yourself over and over."
                 with fade
             
             hide screen ce_ui
             hide screen status_indicator
+            scene placeholder_racetrack1
+            show leo yell
+            with fade
+            
             lt "I'm not about to let this guy frame me for murder."
+            
+            show leo neutral
             lt "Thankfully, he's already made one grave mistake while spewing his falsehoods."
             jump vs_sebCE2_loop
 
             #continue here
             label vs_sebCE_wrong2:
                 $ ce_mode = None
-                l "Mr. Castillo, you have made a serious mistake in your testimony!"
-                show seb smile
+                l yell "Mr. Castillo, you have made a serious mistake in your testimony!"
+                
+                show seb smile3
                 s "The only mistake here is that rag you are carrying around."
-                l "Ugh...!"
+                
+                l closed drop "Ugh...!"
+                
                 lt "It's not a rag, it's a poncho..."
                 # Penalty Damage
-                $ ce_rep -= 1
+                call ce_penalty(2)
                 with fade
                 return
             label vs_sebCE_right2:
                 $ ce_mode = None
-                $ ce_rep += 2
+                $ ce_rep += 0.5
                 call CE_end
                 jump act3_continue2
         label act3_continue2:
             hide screen status_indicator
+            show leo think closed
             l "So, you're claiming that Mr. Ortiz attacked the victim at the top of the grandstands... then threw him over the railing..."
             l "...where he landed at the parade ring, right where the body was found. Did I get that right?"
 
+            hide leo
+            show seb smile
+            with dissolve
+
             s "A fine summary! Now that you understand, how about you leave already?"
 
+            play music objection fadein 0.5
+            hide seb
+            show leo think yell
+            with dissolve
             l "Except your explanation is riddled with holes."
 
+            hide leo
+            show seb grr3
+            with dissolve
             s "H-How dare you!"
+
+            hide seb
+            show leo yell
+            with dissolve
 
             l "If Mr. Ortiz threw the victim from that height, how did he manage to show up and \"prod\" at the corpse, as you put it earlier?"
 
+            hide leo
+            show seb angry
+            with dissolve
             s "He ran! All the way down, as fast as he could!"
 
+            hide seb
+            show leo neutral right
+            with dissolve
             l "It's quite a distance to cover. He would've arrived after you, not before you."
-
+            
+            show leo neutral
             l "And that's not even the biggest problem."
 
+            hide leo
+            show seb frown
+            with dissolve
             s "There's... more?"
 
+            hide seb
+            show leo grin
+            with dissolve
             l "I'm afraid so. Lots more."
 
+            show leo neutral
             l "For starters, there was a distinct lack of blood at the top of the grandstands."
-
+            
+            hide leo
+            show seb grr
+            with dissolve
             s "That's easy! It was cleaned up!"
 
+            call cutin("objection")
+
+            show leo closed
             l "Luminol test."
 
+            hide leo
+            show seb frown
+            with dissolve
             s "What?"
 
+            hide seb
+            show leo neutral 
+            with dissolve
             l "Forensics examined the area thoroughly. Even if someone wipes away the blood, luminol can still react with the traces left behind, revealing what the naked eye can't see."
 
-            l "Yet they found no traces of blood on the railing or the ground beneath the spot where the victim supposedly fell."
+            show leo think closed
+            l "Yet they found no traces of blood on the railing or the ground beneath the spot where the victim supposedly fell from."
 
+            show leo grin
             l "But there was one place where the victim's blood *was* found. Care to guess where?"
-
+            
+            hide leo
+            show seb nervous
+            with dissolve
             s "...Mmmmnngh...."
 
+            call cutin("takethat")
+            hide seb
+            show leo point
+            with flash
             l "Allow me then: Vicente's blood was discovered at the derby's stables!"
 
+            hide leo
+            show seb nervous2
+            with dissolve
             s "I-Impossible!"
+
+            hide seb
+            show me angry
+            with dissolve
 
             me "Forensics confirmed the blood is a match. There's no doubt about it."
 
+            hide me
+            show seb angry3
+            with dissolve
             s ".....that doesn't change a thing though!"
 
+            hide seb
+            show leo neutral
+            with dissolve
             l "...? It seems you don't intend on dropping the accusation."
 
+            hide leo
+            show seb grr2
             s "Of course not! And you will see why right now!"
+            stop music
 label act3_continue3:
     # contra 2: tony used the bag to carry the body from the stables
     #Leo vs Seb Round 2 CE
+    
     default ce_seb_bodybag = False
     label vs_sebCE_3:
     scene placeholder_racetrack1
@@ -873,9 +1134,13 @@ label act3_continue3:
     lt "It's been several errors."
     lt "Hm... nothing in particular seems wrong, but that's because he's skimming over the details."
     lt "I should press him and get a fuller picture of his version of events."
-    
+    call cutin("cross_examination")
+label vs_sebCE_3_loop hide:
     call CE_start
     call fx_interrogation
+    scene placeholder_racetrack1
+    show seb smile3
+    with fade
     s "Fine then, I admit it. That old crook died at the stables."
     #press
     if ce_mode == "object":
@@ -942,7 +1207,7 @@ label act3_continue3:
     hide screen status_indicator
     lt "Parts of his explanation are too vague. I should press for details."
     lt "He's bound to mess up, that will be my chance to counter attack."
-    jump vs_sebCE_3
+    jump vs_sebCE_3_loop
 
     label vs_sebCE_wrong3:
         $ ce_mode = None
@@ -952,13 +1217,13 @@ label act3_continue3:
         lt "Fuck!"
         lt "Ugh, that didn't go so well..."
         # Penalty Damage
-        $ ce_rep -= 1
+        call ce_penalty (2)
         with fade
         return
     
     label vs_sebCE_right3:
         $ ce_mode = None
-        $ ce_rep += 2
+        $ ce_rep += 0.5
         call CE_end
         jump act3_continue4
     
@@ -980,6 +1245,8 @@ label act3_continue4:
     l "Mr. Castillo. Any idea where the body bag used to transport the victim was found?"
 
     s "Hah! How should I know!? Was it dumped in a river?"
+
+    call cutin("objection")
 
     l "It was found inside the staff break room. At the bottom of their trash bin, to be precise."
 
@@ -1137,8 +1404,9 @@ label bigCE_loop:
     $ dossier.add(de_alibi)
     me "Hey, you're gonna ask them something or not?"
     l "Oh, yes! Yes, I will."
-    lt "I wonder if there's anything off about these alibis. Let's find out.
-    "
+    lt "I wonder if there's anything off about these alibis. Let's find out."
+    call cutin("cross_examination")
+label bigCE_loop_ce hide:
     call CE_start
     call fx_interrogation
     scene placeholder_racetrack1
@@ -1372,7 +1640,7 @@ label bigCE_loop:
             "Something bothers me":
                 # Big problems. (Go back to the interrogation.)
                 l "I do. There are a couple of more of things I'd like to ask about."
-                jump bigCE_loop
+                jump bigCE_loop_ce
             "Nothing bothers me":
                 # No problems. (End interrogation.)
                 l "I think we've covered everything, Inspector. We can move on."
@@ -1387,7 +1655,7 @@ label bigCE_wrong:
     me "Or maybe you should check if that mask isn't cutting off the oxygen flow to your brain."
     lt "Ugh... just tell me I was mistaken. So rude..."
     # Penalty Damage
-    $ ce_rep -= 1
+    call ce_penalty(3)
     with fade
     return
 
@@ -1395,7 +1663,7 @@ label bigCE_wrong:
 label bigCE_Renata:
     $ ce_rena_phone = True
     $ ce_mode = None
-    $ ce_rep += 2
+    $ ce_rep += 0.5
     # Objection
     l "Just to make sure I've got this straight... You two left sometime around 10:34 AM?"
     r "Are you deaf? Yeah."
@@ -1419,7 +1687,7 @@ label bigCE_Lucas:
     # Counter response here.
     $ ce_luca_cloth = True
     $ ce_mode = None
-    $ ce_rep += 2
+    $ ce_rep += 0.5
     l "Let me ask you something, Mr. Mendoza. Is this the outfit the man was wearing?"
     lu "Yes! That's exactly what he had on. But... how do you...?"
     l "I'm having a hard time believing you saw someone else wearing these."
@@ -1473,6 +1741,7 @@ label act3_thoughtroute:
     lt "Not to mention that notebook listing all the horses that collapsed during previous races..."
     lt "Both of them are sticking to their stories despite the evidence. What am I supposed to make of this...?"
     lt "Guess it's time to give the ol' noggin a good workout. I'm gonna go over the facts one more time."
+    play music thought_route fadein 2.5
 
     #Thoughtt route!!!
     #make a thought route bg for this part
@@ -2141,7 +2410,6 @@ label act3_continue6:
         # End game // game over screen
         with fade
         return
-    
     label choose_leo:
         l "Actually, I'm the one who reaped Mr. Ruiz's soul. It was me."
 
@@ -2593,7 +2861,7 @@ label debug:
         call fx_interrogation
         show est smile2
         with fade
-
+        call cutin("cross_examination")
         call CE_start
 
         show est 
@@ -2642,7 +2910,7 @@ label debug:
         e "Renata even enlisted the help of her sponsors to cover her tracks before eventually turning to me..."
         if ce_mode == "object":
             call cutin("objection")
-            if ce_object in [de_callrecords]:
+            if ce_object in [de_callrecords, de_alibi]:
                 call vs_esteCE_RIGHT
             else:
                 call vs_esteCE_WRONG
@@ -2731,7 +2999,7 @@ label debug:
         return
     label vs_esteCE_RIGHT:
         $ ce_mode = None
-        $ ce_rep += 2
+        $ ce_rep += 0.5
         show leo neutral
         call CE_end
         l "That's fascinating. It is true that the Inspector established that Castillo's men were contacted by their boss to dispose of the body..."
@@ -2752,10 +3020,13 @@ label debug:
     show est angry
     e "That's hardly evidence, Mr. Leopardo. She could have simply deleted the call from her history."
 
+    call cutin("objection")
     l "Gotcha now."
     
     show est smile2
     e "C-Come again...?"
+
+    
 
     l "Certainly, that's entirely possible."
 
@@ -2794,6 +3065,7 @@ label debug:
 
     menu provider_or_log:
         "Reach out to the phone provider":
+            call cutin("takethat")
             jump provider
         "Check Esteban's phone call history":
             jump phone_history
@@ -2909,6 +3181,7 @@ label debug:
         "Let him continue":
             jump lethimcook
         "Cut him off now":
+            call cutin("holdit")
             jump youcantcook
 
     label lethimcook:
@@ -2923,7 +3196,6 @@ label debug:
         show est angry at right
         show leo neutral at left
         with dissolve
-
         l "I'm afraid there's no need for that."
 
         show est yell
@@ -2983,8 +3255,10 @@ label da_phone_call:
     hide screen status_indicator
     hide est
     hide rena
+    
     show leo smile at center
     with dissolve
+    call cutin("takethat")
     l "Cover the sun with your hand, and the sun will still be there."
 
     show leo neutral
@@ -3103,7 +3377,7 @@ label LastCE:
     show est grit-red
     e "Nngh..."
 
-    
+    call cutin("cross_examination")
     label LastCE_Loop:
     scene placeholder_racetrack1
     call fx_interrogation
@@ -3266,7 +3540,7 @@ label LastCE_WRONG:
 
 label LastCE_RIGHT:
     $ ce_mode = None
-    $ ce_rep += 2
+    $ ce_rep += 0.5
     call CE_end
     jump LastCE_Continue
 
@@ -3286,6 +3560,8 @@ label LastCE_Continue:
     l "You know what that means?"
 
     e "Just get to the point! How does this mystery person count as a reason for me to interfere with Vicente!?"
+
+    
 
     l "You've got that backwards."
 
@@ -3350,6 +3626,7 @@ label LastCE_Continue:
     
     label final_prints:
     #play pursuit here
+    call cutin("takethat")
     show leo point
     l "Your fingerprints, Mr. Rojas!"
 

@@ -16,24 +16,45 @@ transform horse_run:
     linear 1.0 xpos 1520 ypos 470+200+50
     linear 1.0 xpos 2120 ypos 520+200+100
 
+default horses_skipped = False
+
+screen skip_horses():
+        textbutton _("Skip"):
+            action [SetVariable("horses_skipped", True), Return()]
+            xalign 0.98
+            yalign 0.96
+            text_size 18
+            text_color "#ffffff88"
+            text_hover_color "#ffffffff"
+
 label intro_start:
     # Show your racetrack / menu background
     $ dossier_enabled = False
+    $ quick_menu = False
     scene main_menu
+    show screen skip_horses
 
     # Stagger three horses, each starting 0.8 s after the last
     show horse1 at horse_run
-    $ renpy.pause(0.8, hard=True)
-    show horse2 at horse_run
-    $ renpy.pause(0.8, hard=True)
-    show horse3 at horse_run
-    $ renpy.pause(0.8, hard=True)
-    show horse4 at horse_run
-    $ renpy.pause(0.8, hard=True)
-    show horse5 at horse_run
-
-    # Wait for the last horse to finish crossing (4 s total animation)
-    $ renpy.pause(4.2, hard=True)
+    play music "sfx/gallop.ogg" fadeout 0.5
+    if not horses_skipped:
+        $ renpy.pause(0.8, hard=True)
+        show horse2 at horse_run
+    if not horses_skipped:
+        $ renpy.pause(0.8, hard=True)
+        show horse3 at horse_run
+    if not horses_skipped:
+        $ renpy.pause(0.8, hard=True)
+        show horse4 at horse_run
+    if not horses_skipped:
+        $ renpy.pause(0.8, hard=True)
+        show horse5 at horse_run
+    if not horses_skipped:
+        # Wait for the last horse to finish crossing (4 s total animation)
+        $ renpy.pause(4.2, hard=True)
+    hide screen skip_horses
+    stop music fadeout 0.5
+    $ quick_menu = True
 
     # Continue into your actual game
     return   
@@ -51,13 +72,13 @@ label start2:
         linear 3.0 blur 0
     menu:
         "Jump to Portal":
-            jump paddock_inves
+            jump b4fall
         # "Jump to Act I":
         #     jump act1
         #  "Jump to Act II":
         #     jump act2
-        # "Jump to Act III":
-        #     jump act3
+        "Jump to Act III":
+            jump act3
         "Jump to Debug":
             jump debug
         "Jump to Debug Room":
