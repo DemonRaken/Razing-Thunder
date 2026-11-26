@@ -44,31 +44,37 @@ screen game_over():
 
 label game_over:
       $ renpy.block_rollback()
-      stop music
-      scene black with dissolve   # fade to black
+      stop music fadeout 0.5
+      scene black with dissolve # fade to black
       show screen game_over()          # show the text + decoration
       play music sad fadein 0.5
-      pause 3.0                        # keep it on screen for 3 seconds
+      pause 7.0                        # keep it on screen for 3 seconds
       hide screen game_over with dissolve
       $ MainMenu(confirm=False)()      # return to main menu
       return   
 
-
+default seen_announce_interrogation = False
 
 label CE_start:
    # Turn off Rollback for the CE only
    #$ config.rollback_enabled = False
    $ renpy.block_rollback()
-   play music ce
+   if not seen_announce_interrogation:
+      $ seen_announce_interrogation = True
+      call announce_interrogation
+   play music ce fadein 2.5
    show screen ce_ui
    return
 
 label CE_end:
+   
    hide screen ce_ui
+   hide screen status_indicator
    # Turn on RollBack again.
    #$ config.rollback_enabled = True
+   $ seen_announce_interrogation = False
    $ renpy.block_rollback()
-   stop music
+   stop music fadeout 2.5
    return
 
 label testCataCE:
@@ -149,12 +155,20 @@ label cata_flawed_testimony_CE_right:
    call CE_end
    jump deleteme
 
-label ce_penalty(amount):
+label ce_penalty(amount, notLeo=False):
    $ ce_rep -= amount
    if ce_rep <= 0:
       call CE_end
-      lt "Ack. Something happened to me."
+      $ tlt = tt if notLeo else lt
+      tlt "Ack... I made too many mistakes!"
       scene black with fade
-      n "Leopardo Suddenly Collapsed on the spot."
-      n "He never woke up."
+      tlt "I can't concentrate, at this rate, I'll never find the truth...!"
+      tlt "I can't give up...!"
       call game_over
+
+label announce_interrogation:
+   show text _("{size=150}{color=#FF0000}Interrogation{/color}{/size}") at truecenter, investigation_text_zoom
+   pause 2.0
+   hide text
+   return
+
